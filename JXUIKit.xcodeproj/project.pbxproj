@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6450B4321E5C34ED0031309F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6450B4311E5C34ED0031309F /* Podfile */; };
+		6450B43E1E5C36300031309F /* SJPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4341E5C36300031309F /* SJPopupMenu.h */; };
+		6450B43F1E5C36300031309F /* SJPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4351E5C36300031309F /* SJPopupMenu.m */; };
+		6450B4401E5C36300031309F /* SJPopupMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4361E5C36300031309F /* SJPopupMenuItem.h */; };
+		6450B4411E5C36300031309F /* SJPopupMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4371E5C36300031309F /* SJPopupMenuItem.m */; };
+		6450B4421E5C36300031309F /* SJPopupMenuItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4381E5C36300031309F /* SJPopupMenuItemCell.h */; };
+		6450B4431E5C36300031309F /* SJPopupMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4391E5C36300031309F /* SJPopupMenuItemCell.m */; };
+		6450B4441E5C36300031309F /* SJPopupMenuPageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B43A1E5C36300031309F /* SJPopupMenuPageCell.h */; };
+		6450B4451E5C36300031309F /* SJPopupMenuPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B43B1E5C36300031309F /* SJPopupMenuPageCell.m */; };
+		6450B4461E5C36300031309F /* SJPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B43C1E5C36300031309F /* SJPopupView.h */; };
+		6450B4471E5C36300031309F /* SJPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B43D1E5C36300031309F /* SJPopupView.m */; };
+		6450B44D1E5C37B40031309F /* SJDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4491E5C37B40031309F /* SJDropdownMenu.h */; };
+		6450B44E1E5C37B40031309F /* SJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B44A1E5C37B40031309F /* SJDropdownMenu.m */; };
+		6450B44F1E5C37B40031309F /* SJDropdownMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B44B1E5C37B40031309F /* SJDropdownMenuItem.h */; };
+		6450B4501E5C37B40031309F /* SJDropdownMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B44C1E5C37B40031309F /* SJDropdownMenuItem.m */; };
+		6450B4591E5C38CB0031309F /* SJImageCropperView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4521E5C38CB0031309F /* SJImageCropperView.h */; };
+		6450B45A1E5C38CB0031309F /* SJImageCropperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4531E5C38CB0031309F /* SJImageCropperView.m */; };
+		6450B45B1E5C38CB0031309F /* SJMapKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4541E5C38CB0031309F /* SJMapKit.h */; };
+		6450B45C1E5C38CB0031309F /* SJMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4551E5C38CB0031309F /* SJMapView.h */; };
+		6450B45D1E5C38CB0031309F /* SJMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4561E5C38CB0031309F /* SJMapView.m */; };
+		6450B45E1E5C38CB0031309F /* SJMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4571E5C38CB0031309F /* SJMapViewController.h */; };
+		6450B45F1E5C38CB0031309F /* SJMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4581E5C38CB0031309F /* SJMapViewController.m */; };
+		6450B46B1E5C39270031309F /* NSString+SJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4611E5C39270031309F /* NSString+SJExtension.h */; };
+		6450B46C1E5C39270031309F /* NSString+SJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4621E5C39270031309F /* NSString+SJExtension.m */; };
+		6450B46D1E5C39270031309F /* SJFileLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4631E5C39270031309F /* SJFileLoadingView.h */; };
+		6450B46E1E5C39270031309F /* SJFileLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4641E5C39270031309F /* SJFileLoadingView.m */; };
+		6450B46F1E5C39270031309F /* SJFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4651E5C39270031309F /* SJFileManager.h */; };
+		6450B4701E5C39270031309F /* SJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4661E5C39270031309F /* SJFileManager.m */; };
+		6450B4711E5C39270031309F /* SJFilePreviewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4671E5C39270031309F /* SJFilePreviewKit.h */; };
+		6450B4721E5C39270031309F /* SJFilePreviewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4681E5C39270031309F /* SJFilePreviewKit.m */; };
+		6450B4731E5C39270031309F /* SJFilePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4691E5C39270031309F /* SJFilePreviewViewController.h */; };
+		6450B4741E5C39270031309F /* SJFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */; };
+		6450B4781E5C3A8B0031309F /* SJSearchController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4761E5C3A8B0031309F /* SJSearchController.h */; };
+		6450B4791E5C3A8B0031309F /* SJSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4771E5C3A8B0031309F /* SJSearchController.m */; };
+		6470AE2F1E5D32D80057287C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE2E1E5D32D80057287C /* main.m */; };
+		6470AE321E5D32D80057287C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE311E5D32D80057287C /* AppDelegate.m */; };
+		6470AE351E5D32D80057287C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE341E5D32D80057287C /* ViewController.m */; };
+		6470AE381E5D32D80057287C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE361E5D32D80057287C /* Main.storyboard */; };
+		6470AE3A1E5D32D80057287C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE391E5D32D80057287C /* Assets.xcassets */; };
+		6470AE3D1E5D32D80057287C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE3B1E5D32D80057287C /* LaunchScreen.storyboard */; };
+		649DFA921E51C48900B65AEE /* JXUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 649DFA901E51C48900B65AEE /* JXUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B3EACAF9A06815C48DD8EB6 /* Pods-JXUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		6450B4311E5C34ED0031309F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6450B4341E5C36300031309F /* SJPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPopupMenu.h; sourceTree = "<group>"; };
+		6450B4351E5C36300031309F /* SJPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPopupMenu.m; sourceTree = "<group>"; };
+		6450B4361E5C36300031309F /* SJPopupMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPopupMenuItem.h; sourceTree = "<group>"; };
+		6450B4371E5C36300031309F /* SJPopupMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPopupMenuItem.m; sourceTree = "<group>"; };
+		6450B4381E5C36300031309F /* SJPopupMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPopupMenuItemCell.h; sourceTree = "<group>"; };
+		6450B4391E5C36300031309F /* SJPopupMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPopupMenuItemCell.m; sourceTree = "<group>"; };
+		6450B43A1E5C36300031309F /* SJPopupMenuPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPopupMenuPageCell.h; sourceTree = "<group>"; };
+		6450B43B1E5C36300031309F /* SJPopupMenuPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPopupMenuPageCell.m; sourceTree = "<group>"; };
+		6450B43C1E5C36300031309F /* SJPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPopupView.h; sourceTree = "<group>"; };
+		6450B43D1E5C36300031309F /* SJPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPopupView.m; sourceTree = "<group>"; };
+		6450B4491E5C37B40031309F /* SJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJDropdownMenu.h; sourceTree = "<group>"; };
+		6450B44A1E5C37B40031309F /* SJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJDropdownMenu.m; sourceTree = "<group>"; };
+		6450B44B1E5C37B40031309F /* SJDropdownMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJDropdownMenuItem.h; sourceTree = "<group>"; };
+		6450B44C1E5C37B40031309F /* SJDropdownMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJDropdownMenuItem.m; sourceTree = "<group>"; };
+		6450B4521E5C38CB0031309F /* SJImageCropperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJImageCropperView.h; sourceTree = "<group>"; };
+		6450B4531E5C38CB0031309F /* SJImageCropperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJImageCropperView.m; sourceTree = "<group>"; };
+		6450B4541E5C38CB0031309F /* SJMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMapKit.h; sourceTree = "<group>"; };
+		6450B4551E5C38CB0031309F /* SJMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMapView.h; sourceTree = "<group>"; };
+		6450B4561E5C38CB0031309F /* SJMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMapView.m; sourceTree = "<group>"; };
+		6450B4571E5C38CB0031309F /* SJMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMapViewController.h; sourceTree = "<group>"; };
+		6450B4581E5C38CB0031309F /* SJMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMapViewController.m; sourceTree = "<group>"; };
+		6450B4611E5C39270031309F /* NSString+SJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SJExtension.h"; sourceTree = "<group>"; };
+		6450B4621E5C39270031309F /* NSString+SJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJExtension.m"; sourceTree = "<group>"; };
+		6450B4631E5C39270031309F /* SJFileLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFileLoadingView.h; sourceTree = "<group>"; };
+		6450B4641E5C39270031309F /* SJFileLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFileLoadingView.m; sourceTree = "<group>"; };
+		6450B4651E5C39270031309F /* SJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFileManager.h; sourceTree = "<group>"; };
+		6450B4661E5C39270031309F /* SJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFileManager.m; sourceTree = "<group>"; };
+		6450B4671E5C39270031309F /* SJFilePreviewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFilePreviewKit.h; sourceTree = "<group>"; };
+		6450B4681E5C39270031309F /* SJFilePreviewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFilePreviewKit.m; sourceTree = "<group>"; };
+		6450B4691E5C39270031309F /* SJFilePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFilePreviewViewController.h; sourceTree = "<group>"; };
+		6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFilePreviewViewController.m; sourceTree = "<group>"; };
+		6450B4761E5C3A8B0031309F /* SJSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSearchController.h; sourceTree = "<group>"; };
+		6450B4771E5C3A8B0031309F /* SJSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSearchController.m; sourceTree = "<group>"; };
+		6470AE2B1E5D32D80057287C /* JXUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6470AE2E1E5D32D80057287C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6470AE301E5D32D80057287C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6470AE311E5D32D80057287C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6470AE331E5D32D80057287C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6470AE341E5D32D80057287C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6470AE371E5D32D80057287C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6470AE391E5D32D80057287C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6470AE3C1E5D32D80057287C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6470AE3E1E5D32D80057287C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649DFA8D1E51C48900B65AEE /* JXUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		649DFA901E51C48900B65AEE /* JXUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXUIKit.h; sourceTree = "<group>"; };
+		649DFA911E51C48900B65AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6470AE281E5D32D80057287C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649DFA891E51C48900B65AEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		588846CDC9303C4BF94FA99B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6450B4331E5C362F0031309F /* SJPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4341E5C36300031309F /* SJPopupMenu.h */,
+				6450B4351E5C36300031309F /* SJPopupMenu.m */,
+				6450B4361E5C36300031309F /* SJPopupMenuItem.h */,
+				6450B4371E5C36300031309F /* SJPopupMenuItem.m */,
+				6450B4381E5C36300031309F /* SJPopupMenuItemCell.h */,
+				6450B4391E5C36300031309F /* SJPopupMenuItemCell.m */,
+				6450B43A1E5C36300031309F /* SJPopupMenuPageCell.h */,
+				6450B43B1E5C36300031309F /* SJPopupMenuPageCell.m */,
+				6450B43C1E5C36300031309F /* SJPopupView.h */,
+				6450B43D1E5C36300031309F /* SJPopupView.m */,
+			);
+			path = SJPopupMenu;
+			sourceTree = "<group>";
+		};
+		6450B4481E5C37B40031309F /* SJDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4491E5C37B40031309F /* SJDropdownMenu.h */,
+				6450B44A1E5C37B40031309F /* SJDropdownMenu.m */,
+				6450B44B1E5C37B40031309F /* SJDropdownMenuItem.h */,
+				6450B44C1E5C37B40031309F /* SJDropdownMenuItem.m */,
+			);
+			path = SJDropdownMenu;
+			sourceTree = "<group>";
+		};
+		6450B4511E5C38CB0031309F /* SJMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4521E5C38CB0031309F /* SJImageCropperView.h */,
+				6450B4531E5C38CB0031309F /* SJImageCropperView.m */,
+				6450B4541E5C38CB0031309F /* SJMapKit.h */,
+				6450B4551E5C38CB0031309F /* SJMapView.h */,
+				6450B4561E5C38CB0031309F /* SJMapView.m */,
+				6450B4571E5C38CB0031309F /* SJMapViewController.h */,
+				6450B4581E5C38CB0031309F /* SJMapViewController.m */,
+			);
+			path = SJMapKit;
+			sourceTree = "<group>";
+		};
+		6450B4601E5C39270031309F /* SJFilePreviewKit */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4611E5C39270031309F /* NSString+SJExtension.h */,
+				6450B4621E5C39270031309F /* NSString+SJExtension.m */,
+				6450B4631E5C39270031309F /* SJFileLoadingView.h */,
+				6450B4641E5C39270031309F /* SJFileLoadingView.m */,
+				6450B4651E5C39270031309F /* SJFileManager.h */,
+				6450B4661E5C39270031309F /* SJFileManager.m */,
+				6450B4671E5C39270031309F /* SJFilePreviewKit.h */,
+				6450B4681E5C39270031309F /* SJFilePreviewKit.m */,
+				6450B4691E5C39270031309F /* SJFilePreviewViewController.h */,
+				6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */,
+			);
+			path = SJFilePreviewKit;
+			sourceTree = "<group>";
+		};
+		6450B4751E5C3A8B0031309F /* SJSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4761E5C3A8B0031309F /* SJSearchController.h */,
+				6450B4771E5C3A8B0031309F /* SJSearchController.m */,
+			);
+			path = SJSearchController;
+			sourceTree = "<group>";
+		};
+		6470AE2C1E5D32D80057287C /* JXUIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6470AE301E5D32D80057287C /* AppDelegate.h */,
+				6470AE311E5D32D80057287C /* AppDelegate.m */,
+				6470AE331E5D32D80057287C /* ViewController.h */,
+				6470AE341E5D32D80057287C /* ViewController.m */,
+				6470AE361E5D32D80057287C /* Main.storyboard */,
+				6470AE391E5D32D80057287C /* Assets.xcassets */,
+				6470AE3B1E5D32D80057287C /* LaunchScreen.storyboard */,
+				6470AE3E1E5D32D80057287C /* Info.plist */,
+				6470AE2D1E5D32D80057287C /* Supporting Files */,
+			);
+			path = JXUIKitDemo;
+			sourceTree = "<group>";
+		};
+		6470AE2D1E5D32D80057287C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6470AE2E1E5D32D80057287C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		649DFA831E51C48900B65AEE = {
+			isa = PBXGroup;
+			children = (
+				6450B4311E5C34ED0031309F /* Podfile */,
+				649DFA8F1E51C48900B65AEE /* JXUIKit */,
+				6470AE2C1E5D32D80057287C /* JXUIKitDemo */,
+				649DFA8E1E51C48900B65AEE /* Products */,
+				88D5D8078169F79E8BF048A9 /* Pods */,
+				588846CDC9303C4BF94FA99B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		649DFA8E1E51C48900B65AEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				649DFA8D1E51C48900B65AEE /* JXUIKit.framework */,
+				6470AE2B1E5D32D80057287C /* JXUIKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		649DFA8F1E51C48900B65AEE /* JXUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6450B4751E5C3A8B0031309F /* SJSearchController */,
+				6450B4601E5C39270031309F /* SJFilePreviewKit */,
+				6450B4511E5C38CB0031309F /* SJMapKit */,
+				6450B4481E5C37B40031309F /* SJDropdownMenu */,
+				6450B4331E5C362F0031309F /* SJPopupMenu */,
+				649DFA901E51C48900B65AEE /* JXUIKit.h */,
+				649DFA911E51C48900B65AEE /* Info.plist */,
+			);
+			path = JXUIKit;
+			sourceTree = "<group>";
+		};
+		88D5D8078169F79E8BF048A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */,
+				4B3EACAF9A06815C48DD8EB6 /* Pods-JXUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		649DFA8A1E51C48900B65AEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6450B44F1E5C37B40031309F /* SJDropdownMenuItem.h in Headers */,
+				6450B45E1E5C38CB0031309F /* SJMapViewController.h in Headers */,
+				6450B45B1E5C38CB0031309F /* SJMapKit.h in Headers */,
+				6450B4781E5C3A8B0031309F /* SJSearchController.h in Headers */,
+				6450B4421E5C36300031309F /* SJPopupMenuItemCell.h in Headers */,
+				6450B44D1E5C37B40031309F /* SJDropdownMenu.h in Headers */,
+				6450B46B1E5C39270031309F /* NSString+SJExtension.h in Headers */,
+				6450B4401E5C36300031309F /* SJPopupMenuItem.h in Headers */,
+				6450B4441E5C36300031309F /* SJPopupMenuPageCell.h in Headers */,
+				6450B45C1E5C38CB0031309F /* SJMapView.h in Headers */,
+				6450B46D1E5C39270031309F /* SJFileLoadingView.h in Headers */,
+				6450B4461E5C36300031309F /* SJPopupView.h in Headers */,
+				6450B4731E5C39270031309F /* SJFilePreviewViewController.h in Headers */,
+				6450B46F1E5C39270031309F /* SJFileManager.h in Headers */,
+				6450B4591E5C38CB0031309F /* SJImageCropperView.h in Headers */,
+				649DFA921E51C48900B65AEE /* JXUIKit.h in Headers */,
+				6450B43E1E5C36300031309F /* SJPopupMenu.h in Headers */,
+				6450B4711E5C39270031309F /* SJFilePreviewKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6470AE2A1E5D32D80057287C /* JXUIKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6470AE411E5D32D80057287C /* Build configuration list for PBXNativeTarget "JXUIKitDemo" */;
+			buildPhases = (
+				6470AE271E5D32D80057287C /* Sources */,
+				6470AE281E5D32D80057287C /* Frameworks */,
+				6470AE291E5D32D80057287C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JXUIKitDemo;
+			productName = JXUIKitDemo;
+			productReference = 6470AE2B1E5D32D80057287C /* JXUIKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		649DFA8C1E51C48900B65AEE /* JXUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649DFA951E51C48900B65AEE /* Build configuration list for PBXNativeTarget "JXUIKit" */;
+			buildPhases = (
+				AE718230A276790B3574533A /* [CP] Check Pods Manifest.lock */,
+				649DFA881E51C48900B65AEE /* Sources */,
+				649DFA891E51C48900B65AEE /* Frameworks */,
+				649DFA8A1E51C48900B65AEE /* Headers */,
+				649DFA8B1E51C48900B65AEE /* Resources */,
+				C558A332241295A291ED4289 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JXUIKit;
+			productName = JXUIKit;
+			productReference = 649DFA8D1E51C48900B65AEE /* JXUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		649DFA841E51C48900B65AEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = zjx;
+				TargetAttributes = {
+					6470AE2A1E5D32D80057287C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L3N6WAC9H6;
+						ProvisioningStyle = Automatic;
+					};
+					649DFA8C1E51C48900B65AEE = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 649DFA871E51C48900B65AEE /* Build configuration list for PBXProject "JXUIKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 649DFA831E51C48900B65AEE;
+			productRefGroup = 649DFA8E1E51C48900B65AEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				649DFA8C1E51C48900B65AEE /* JXUIKit */,
+				6470AE2A1E5D32D80057287C /* JXUIKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6470AE291E5D32D80057287C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6470AE3D1E5D32D80057287C /* LaunchScreen.storyboard in Resources */,
+				6470AE3A1E5D32D80057287C /* Assets.xcassets in Resources */,
+				6470AE381E5D32D80057287C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649DFA8B1E51C48900B65AEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6450B4321E5C34ED0031309F /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE718230A276790B3574533A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C558A332241295A291ED4289 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6470AE271E5D32D80057287C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6470AE351E5D32D80057287C /* ViewController.m in Sources */,
+				6470AE321E5D32D80057287C /* AppDelegate.m in Sources */,
+				6470AE2F1E5D32D80057287C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649DFA881E51C48900B65AEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6450B4721E5C39270031309F /* SJFilePreviewKit.m in Sources */,
+				6450B44E1E5C37B40031309F /* SJDropdownMenu.m in Sources */,
+				6450B43F1E5C36300031309F /* SJPopupMenu.m in Sources */,
+				6450B4501E5C37B40031309F /* SJDropdownMenuItem.m in Sources */,
+				6450B4431E5C36300031309F /* SJPopupMenuItemCell.m in Sources */,
+				6450B46E1E5C39270031309F /* SJFileLoadingView.m in Sources */,
+				6450B4791E5C3A8B0031309F /* SJSearchController.m in Sources */,
+				6450B46C1E5C39270031309F /* NSString+SJExtension.m in Sources */,
+				6450B4741E5C39270031309F /* SJFilePreviewViewController.m in Sources */,
+				6450B45F1E5C38CB0031309F /* SJMapViewController.m in Sources */,
+				6450B4471E5C36300031309F /* SJPopupView.m in Sources */,
+				6450B4701E5C39270031309F /* SJFileManager.m in Sources */,
+				6450B45A1E5C38CB0031309F /* SJImageCropperView.m in Sources */,
+				6450B4411E5C36300031309F /* SJPopupMenuItem.m in Sources */,
+				6450B45D1E5C38CB0031309F /* SJMapView.m in Sources */,
+				6450B4451E5C36300031309F /* SJPopupMenuPageCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6470AE361E5D32D80057287C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6470AE371E5D32D80057287C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6470AE3B1E5D32D80057287C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6470AE3C1E5D32D80057287C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6470AE3F1E5D32D80057287C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N6WAC9H6;
+				INFOPLIST_FILE = JXUIKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjx.JXUIKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6470AE401E5D32D80057287C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N6WAC9H6;
+				INFOPLIST_FILE = JXUIKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjx.JXUIKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		649DFA931E51C48900B65AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		649DFA941E51C48900B65AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		649DFA961E51C48900B65AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JXUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjx.JXUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		649DFA971E51C48900B65AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3EACAF9A06815C48DD8EB6 /* Pods-JXUIKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JXUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjx.JXUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6470AE411E5D32D80057287C /* Build configuration list for PBXNativeTarget "JXUIKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6470AE3F1E5D32D80057287C /* Debug */,
+				6470AE401E5D32D80057287C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		649DFA871E51C48900B65AEE /* Build configuration list for PBXProject "JXUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649DFA931E51C48900B65AEE /* Debug */,
+				649DFA941E51C48900B65AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		649DFA951E51C48900B65AEE /* Build configuration list for PBXNativeTarget "JXUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649DFA961E51C48900B65AEE /* Debug */,
+				649DFA971E51C48900B65AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 649DFA841E51C48900B65AEE /* Project object */;
+}
