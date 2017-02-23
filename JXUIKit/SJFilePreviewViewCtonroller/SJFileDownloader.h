@@ -1,8 +1,8 @@
 //
-//  SJFileManager.h
-//  SJFilePreviewKit
+//  SJFileDownloader.h
+//  SJFilePreviewViewController
 //
-//  Created by zjx on 2017/2/17.
+//  Created by zjx on 2017/2/23.
 //  Copyright © 2017年 zjx. All rights reserved.
 //
 
@@ -13,10 +13,12 @@ typedef void (^SJFileDownloadCompletionBlock)(NSURL *__nullable localFileURL, NS
 typedef void (^KLCheckCacheCompletionBlock)(NSURL *__nullable localFileURL);
 
 
-@interface SJFileManager : NSObject
+@interface SJFileDownloader : NSObject
 
-+ (nullable instancetype)sharedManager;
++ (nullable instancetype)sharedDownloader;
 
 - (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable SJFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull SJFileDownloadCompletionBlock)completedBlock;
+
+- (void)cacheFileWithLocation:(nonnull NSURL *)location;
 
 @end

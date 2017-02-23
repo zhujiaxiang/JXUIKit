@@ -29,16 +29,6 @@
 		6450B45D1E5C38CB0031309F /* SJMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4561E5C38CB0031309F /* SJMapView.m */; };
 		6450B45E1E5C38CB0031309F /* SJMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4571E5C38CB0031309F /* SJMapViewController.h */; };
 		6450B45F1E5C38CB0031309F /* SJMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4581E5C38CB0031309F /* SJMapViewController.m */; };
-		6450B46B1E5C39270031309F /* NSString+SJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4611E5C39270031309F /* NSString+SJExtension.h */; };
-		6450B46C1E5C39270031309F /* NSString+SJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4621E5C39270031309F /* NSString+SJExtension.m */; };
-		6450B46D1E5C39270031309F /* SJFileLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4631E5C39270031309F /* SJFileLoadingView.h */; };
-		6450B46E1E5C39270031309F /* SJFileLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4641E5C39270031309F /* SJFileLoadingView.m */; };
-		6450B46F1E5C39270031309F /* SJFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4651E5C39270031309F /* SJFileManager.h */; };
-		6450B4701E5C39270031309F /* SJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4661E5C39270031309F /* SJFileManager.m */; };
-		6450B4711E5C39270031309F /* SJFilePreviewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4671E5C39270031309F /* SJFilePreviewKit.h */; };
-		6450B4721E5C39270031309F /* SJFilePreviewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4681E5C39270031309F /* SJFilePreviewKit.m */; };
-		6450B4731E5C39270031309F /* SJFilePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4691E5C39270031309F /* SJFilePreviewViewController.h */; };
-		6450B4741E5C39270031309F /* SJFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */; };
 		6450B4781E5C3A8B0031309F /* SJSearchController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4761E5C3A8B0031309F /* SJSearchController.h */; };
 		6450B4791E5C3A8B0031309F /* SJSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4771E5C3A8B0031309F /* SJSearchController.m */; };
 		6470AE2F1E5D32D80057287C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6470AE2E1E5D32D80057287C /* main.m */; };
@@ -48,6 +38,14 @@
 		6470AE3A1E5D32D80057287C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE391E5D32D80057287C /* Assets.xcassets */; };
 		6470AE3D1E5D32D80057287C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE3B1E5D32D80057287C /* LaunchScreen.storyboard */; };
 		649DFA921E51C48900B65AEE /* JXUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 649DFA901E51C48900B65AEE /* JXUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D01D671E5EF0CD00C7EDD4 /* SJFilePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D5E1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.h */; };
+		64D01D681E5EF0CD00C7EDD4 /* SJFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D5F1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.m */; };
+		64D01D691E5EF0CD00C7EDD4 /* SJFileDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D601E5EF0CD00C7EDD4 /* SJFileDownloader.h */; };
+		64D01D6A1E5EF0CD00C7EDD4 /* SJFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D611E5EF0CD00C7EDD4 /* SJFileDownloader.m */; };
+		64D01D6B1E5EF0CD00C7EDD4 /* SJFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D631E5EF0CD00C7EDD4 /* SJFileCache.h */; };
+		64D01D6C1E5EF0CD00C7EDD4 /* SJFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D641E5EF0CD00C7EDD4 /* SJFileCache.m */; };
+		64D01D6F1E5EF0EE00C7EDD4 /* SJFileLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D6D1E5EF0EE00C7EDD4 /* SJFileLoadingView.h */; };
+		64D01D701E5EF0EE00C7EDD4 /* SJFileLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D6E1E5EF0EE00C7EDD4 /* SJFileLoadingView.m */; };
 		E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */; };
 /* End PBXBuildFile section */
 
@@ -75,16 +73,6 @@
 		6450B4561E5C38CB0031309F /* SJMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMapView.m; sourceTree = "<group>"; };
 		6450B4571E5C38CB0031309F /* SJMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMapViewController.h; sourceTree = "<group>"; };
 		6450B4581E5C38CB0031309F /* SJMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMapViewController.m; sourceTree = "<group>"; };
-		6450B4611E5C39270031309F /* NSString+SJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SJExtension.h"; sourceTree = "<group>"; };
-		6450B4621E5C39270031309F /* NSString+SJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJExtension.m"; sourceTree = "<group>"; };
-		6450B4631E5C39270031309F /* SJFileLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFileLoadingView.h; sourceTree = "<group>"; };
-		6450B4641E5C39270031309F /* SJFileLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFileLoadingView.m; sourceTree = "<group>"; };
-		6450B4651E5C39270031309F /* SJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFileManager.h; sourceTree = "<group>"; };
-		6450B4661E5C39270031309F /* SJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFileManager.m; sourceTree = "<group>"; };
-		6450B4671E5C39270031309F /* SJFilePreviewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFilePreviewKit.h; sourceTree = "<group>"; };
-		6450B4681E5C39270031309F /* SJFilePreviewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFilePreviewKit.m; sourceTree = "<group>"; };
-		6450B4691E5C39270031309F /* SJFilePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFilePreviewViewController.h; sourceTree = "<group>"; };
-		6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFilePreviewViewController.m; sourceTree = "<group>"; };
 		6450B4761E5C3A8B0031309F /* SJSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSearchController.h; sourceTree = "<group>"; };
 		6450B4771E5C3A8B0031309F /* SJSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSearchController.m; sourceTree = "<group>"; };
 		6470AE2B1E5D32D80057287C /* JXUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +88,14 @@
 		649DFA8D1E51C48900B65AEE /* JXUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DFA901E51C48900B65AEE /* JXUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXUIKit.h; sourceTree = "<group>"; };
 		649DFA911E51C48900B65AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D01D5E1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFilePreviewViewController.h; sourceTree = "<group>"; };
+		64D01D5F1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFilePreviewViewController.m; sourceTree = "<group>"; };
+		64D01D601E5EF0CD00C7EDD4 /* SJFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJFileDownloader.h; path = SJFilePreviewViewController/SJFileDownloader.h; sourceTree = "<group>"; };
+		64D01D611E5EF0CD00C7EDD4 /* SJFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJFileDownloader.m; path = SJFilePreviewViewController/SJFileDownloader.m; sourceTree = "<group>"; };
+		64D01D631E5EF0CD00C7EDD4 /* SJFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJFileCache.h; path = SJFilePreviewViewController/SJFileCache.h; sourceTree = "<group>"; };
+		64D01D641E5EF0CD00C7EDD4 /* SJFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJFileCache.m; path = SJFilePreviewViewController/SJFileCache.m; sourceTree = "<group>"; };
+		64D01D6D1E5EF0EE00C7EDD4 /* SJFileLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFileLoadingView.h; sourceTree = "<group>"; };
+		64D01D6E1E5EF0EE00C7EDD4 /* SJFileLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFileLoadingView.m; sourceTree = "<group>"; };
 		8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,23 +169,6 @@
 			path = SJMapKit;
 			sourceTree = "<group>";
 		};
-		6450B4601E5C39270031309F /* SJFilePreviewKit */ = {
-			isa = PBXGroup;
-			children = (
-				6450B4611E5C39270031309F /* NSString+SJExtension.h */,
-				6450B4621E5C39270031309F /* NSString+SJExtension.m */,
-				6450B4631E5C39270031309F /* SJFileLoadingView.h */,
-				6450B4641E5C39270031309F /* SJFileLoadingView.m */,
-				6450B4651E5C39270031309F /* SJFileManager.h */,
-				6450B4661E5C39270031309F /* SJFileManager.m */,
-				6450B4671E5C39270031309F /* SJFilePreviewKit.h */,
-				6450B4681E5C39270031309F /* SJFilePreviewKit.m */,
-				6450B4691E5C39270031309F /* SJFilePreviewViewController.h */,
-				6450B46A1E5C39270031309F /* SJFilePreviewViewController.m */,
-			);
-			path = SJFilePreviewKit;
-			sourceTree = "<group>";
-		};
 		6450B4751E5C3A8B0031309F /* SJSearchController */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +226,8 @@
 		649DFA8F1E51C48900B65AEE /* JXUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				64D01D661E5EF0CD00C7EDD4 /* SJFilePreviewViewController */,
 				6450B4751E5C3A8B0031309F /* SJSearchController */,
-				6450B4601E5C39270031309F /* SJFilePreviewKit */,
 				6450B4511E5C38CB0031309F /* SJMapKit */,
 				6450B4481E5C37B40031309F /* SJDropdownMenu */,
 				6450B4331E5C362F0031309F /* SJPopupMenu */,
@@ -256,6 +235,48 @@
 				649DFA911E51C48900B65AEE /* Info.plist */,
 			);
 			path = JXUIKit;
+			sourceTree = "<group>";
+		};
+		64D01D621E5EF0CD00C7EDD4 /* SJFileDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				64D01D601E5EF0CD00C7EDD4 /* SJFileDownloader.h */,
+				64D01D611E5EF0CD00C7EDD4 /* SJFileDownloader.m */,
+			);
+			name = SJFileDownloader;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		64D01D651E5EF0CD00C7EDD4 /* SJFileCache */ = {
+			isa = PBXGroup;
+			children = (
+				64D01D631E5EF0CD00C7EDD4 /* SJFileCache.h */,
+				64D01D641E5EF0CD00C7EDD4 /* SJFileCache.m */,
+			);
+			name = SJFileCache;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		64D01D661E5EF0CD00C7EDD4 /* SJFilePreviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				64D01D5E1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.h */,
+				64D01D5F1E5EF0CD00C7EDD4 /* SJFilePreviewViewController.m */,
+				64D01D621E5EF0CD00C7EDD4 /* SJFileDownloader */,
+				64D01D651E5EF0CD00C7EDD4 /* SJFileCache */,
+				64D01D711E5EF0F500C7EDD4 /* SJFileLoadingView */,
+			);
+			name = SJFilePreviewViewController;
+			path = ../../SJFilePreviewViewController/SJFilePreviewViewController;
+			sourceTree = "<group>";
+		};
+		64D01D711E5EF0F500C7EDD4 /* SJFileLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				64D01D6D1E5EF0EE00C7EDD4 /* SJFileLoadingView.h */,
+				64D01D6E1E5EF0EE00C7EDD4 /* SJFileLoadingView.m */,
+			);
+			name = SJFileLoadingView;
 			sourceTree = "<group>";
 		};
 		88D5D8078169F79E8BF048A9 /* Pods */ = {
@@ -274,24 +295,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D01D6F1E5EF0EE00C7EDD4 /* SJFileLoadingView.h in Headers */,
 				6450B44F1E5C37B40031309F /* SJDropdownMenuItem.h in Headers */,
+				64D01D671E5EF0CD00C7EDD4 /* SJFilePreviewViewController.h in Headers */,
 				6450B45E1E5C38CB0031309F /* SJMapViewController.h in Headers */,
 				6450B45B1E5C38CB0031309F /* SJMapKit.h in Headers */,
+				64D01D6B1E5EF0CD00C7EDD4 /* SJFileCache.h in Headers */,
 				6450B4781E5C3A8B0031309F /* SJSearchController.h in Headers */,
+				64D01D691E5EF0CD00C7EDD4 /* SJFileDownloader.h in Headers */,
 				6450B4421E5C36300031309F /* SJPopupMenuItemCell.h in Headers */,
 				6450B44D1E5C37B40031309F /* SJDropdownMenu.h in Headers */,
-				6450B46B1E5C39270031309F /* NSString+SJExtension.h in Headers */,
 				6450B4401E5C36300031309F /* SJPopupMenuItem.h in Headers */,
 				6450B4441E5C36300031309F /* SJPopupMenuPageCell.h in Headers */,
 				6450B45C1E5C38CB0031309F /* SJMapView.h in Headers */,
-				6450B46D1E5C39270031309F /* SJFileLoadingView.h in Headers */,
 				6450B4461E5C36300031309F /* SJPopupView.h in Headers */,
-				6450B4731E5C39270031309F /* SJFilePreviewViewController.h in Headers */,
-				6450B46F1E5C39270031309F /* SJFileManager.h in Headers */,
 				6450B4591E5C38CB0031309F /* SJImageCropperView.h in Headers */,
 				649DFA921E51C48900B65AEE /* JXUIKit.h in Headers */,
 				6450B43E1E5C36300031309F /* SJPopupMenu.h in Headers */,
-				6450B4711E5C39270031309F /* SJFilePreviewKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,21 +463,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6450B4721E5C39270031309F /* SJFilePreviewKit.m in Sources */,
 				6450B44E1E5C37B40031309F /* SJDropdownMenu.m in Sources */,
 				6450B43F1E5C36300031309F /* SJPopupMenu.m in Sources */,
 				6450B4501E5C37B40031309F /* SJDropdownMenuItem.m in Sources */,
 				6450B4431E5C36300031309F /* SJPopupMenuItemCell.m in Sources */,
-				6450B46E1E5C39270031309F /* SJFileLoadingView.m in Sources */,
 				6450B4791E5C3A8B0031309F /* SJSearchController.m in Sources */,
-				6450B46C1E5C39270031309F /* NSString+SJExtension.m in Sources */,
-				6450B4741E5C39270031309F /* SJFilePreviewViewController.m in Sources */,
 				6450B45F1E5C38CB0031309F /* SJMapViewController.m in Sources */,
 				6450B4471E5C36300031309F /* SJPopupView.m in Sources */,
-				6450B4701E5C39270031309F /* SJFileManager.m in Sources */,
+				64D01D701E5EF0EE00C7EDD4 /* SJFileLoadingView.m in Sources */,
+				64D01D6C1E5EF0CD00C7EDD4 /* SJFileCache.m in Sources */,
 				6450B45A1E5C38CB0031309F /* SJImageCropperView.m in Sources */,
 				6450B4411E5C36300031309F /* SJPopupMenuItem.m in Sources */,
+				64D01D6A1E5EF0CD00C7EDD4 /* SJFileDownloader.m in Sources */,
 				6450B45D1E5C38CB0031309F /* SJMapView.m in Sources */,
+				64D01D681E5EF0CD00C7EDD4 /* SJFilePreviewViewController.m in Sources */,
 				6450B4451E5C36300031309F /* SJPopupMenuPageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +669,7 @@
 				6470AE401E5D32D80057287C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		649DFA871E51C48900B65AEE /* Build configuration list for PBXProject "JXUIKit" */ = {
 			isa = XCConfigurationList;
