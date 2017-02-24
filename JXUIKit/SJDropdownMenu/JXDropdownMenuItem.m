@@ -1,22 +1,22 @@
 //
-//  SJDropdownMenuItem.m
-//  SJDropdownMenu
+//  JXDropdownMenuItem.m
+//  JXDropdownMenu
 //
-//  Created by zjx on 16/8/3.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/8/3.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJDropdownMenuItem.h"
+#import "JXDropdownMenuItem.h"
 
 
-@implementation SJDropdownMenuItem
+@implementation JXDropdownMenuItem
 
 + (instancetype) menuItem:(NSString *) title
                     image:(UIImage *) image
                    target:(id)target
                    action:(SEL) action
 {
-    return [[SJDropdownMenuItem alloc] init:title
+    return [[JXDropdownMenuItem alloc] init:title
                                         image:image
                                        target:target
                                        action:action];

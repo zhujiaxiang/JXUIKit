@@ -2,17 +2,17 @@
 //  JXUIKit.h
 //  JXUIKit
 //
-//  Created by zjx on 2017/2/13.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/13.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-#import "SJMapKit.h"
-#import "SJSearchController.h"
-#import "SJFilerPreviewKit.h"
-#import "SJDropdownMenu.h"
-#import "SJPopupMenu.h"
+#import "JXMapKit.h"
+#import "JXSearchController.h"
+#import "JXFilerPreviewKit.h"
+#import "JXDropdownMenu.h"
+#import "JXPopupMenu.h"
 
 //! Project version number for JXUIKit.
 FOUNDATION_EXPORT double JXUIKitVersionNumber;

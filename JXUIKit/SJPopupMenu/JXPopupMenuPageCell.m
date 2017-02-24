@@ -1,27 +1,27 @@
 //
-//  SJPopupMenuPageCell.m
-//  SJPopupMenu
+//  JXPopupMenuPageCell.m
+//  JXPopupMenu
 //
-//  Created by zjx on 16/7/26.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/7/26.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJPopupMenuItem.h"
-#import "SJPopupMenuItemCell.h"
-#import "SJPopupMenuPageCell.h"
+#import "JXPopupMenuItem.h"
+#import "JXPopupMenuItemCell.h"
+#import "JXPopupMenuPageCell.h"
 
 // 3rd
 #import <Masonry/Masonry.h>
-@interface SJPopupMenuPageCell () <UICollectionViewDataSource,
+@interface JXPopupMenuPageCell () <UICollectionViewDataSource,
                                    UICollectionViewDelegate,
-                                   UICollectionViewDelegateFlowLayout, SJPopupMenuItemCellDelegate>
+                                   UICollectionViewDelegateFlowLayout, JXPopupMenuItemCellDelegate>
 
 @property(nonatomic, strong) UICollectionView *pageCollectionView;
 @property(nonatomic, assign) NSInteger columns;
 
 @end
 
-@implementation SJPopupMenuPageCell
+@implementation JXPopupMenuPageCell
 
 #pragma mark - init
 - (id)initWithFrame:(CGRect)frame
@@ -40,8 +40,8 @@
             view.delegate = self;
             view.dataSource = self;
             view.scrollEnabled = NO;
-            NSString *identifier = NSStringFromClass([SJPopupMenuItemCell class]);
-            [view registerClass:[SJPopupMenuItemCell class] forCellWithReuseIdentifier:identifier];
+            NSString *identifier = NSStringFromClass([JXPopupMenuItemCell class]);
+            [view registerClass:[JXPopupMenuItemCell class] forCellWithReuseIdentifier:identifier];
             view.translatesAutoresizingMaskIntoConstraints = NO;
 
             [self.contentView addSubview:view];
@@ -70,8 +70,8 @@
         view.delegate = self;
         view.dataSource = self;
         view.scrollEnabled = NO;
-        NSString *identifier = NSStringFromClass([SJPopupMenuItemCell class]);
-        [view registerClass:[SJPopupMenuItemCell class] forCellWithReuseIdentifier:identifier];
+        NSString *identifier = NSStringFromClass([JXPopupMenuItemCell class]);
+        [view registerClass:[JXPopupMenuItemCell class] forCellWithReuseIdentifier:identifier];
         view.translatesAutoresizingMaskIntoConstraints = NO;
 
         [self.contentView addSubview:view];
@@ -109,10 +109,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SJPopupMenuItem *menuItem = (SJPopupMenuItem *)[self.menuPageItems objectAtIndex:indexPath.row];
+    JXPopupMenuItem *menuItem = (JXPopupMenuItem *)[self.menuPageItems objectAtIndex:indexPath.row];
 
-    NSString *identifier = NSStringFromClass([SJPopupMenuItemCell class]);
-    SJPopupMenuItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    NSString *identifier = NSStringFromClass([JXPopupMenuItemCell class]);
+    JXPopupMenuItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
 
     [cell.menuItemButton setImage:menuItem.icon forState:UIControlStateNormal];
     cell.menuLabel.text = menuItem.title;
@@ -132,12 +132,12 @@
     NSLog(@"%ld", (long)indexPath.row);
 }
 
-#pragma mark - SJPopupMenuItemCellDelegate
-- (void)popupMenuItemCell:(SJPopupMenuItemCell *)menuCell
+#pragma mark - JXPopupMenuItemCellDelegate
+- (void)popupMenuItemCell:(JXPopupMenuItemCell *)menuCell
           selectedAtIndex:(NSInteger)index
 {
-    if ([self.delegate respondsToSelector:@selector(sj_popupMenuPageCell:didSelectCellAtIndex:)]) {
-        [self.delegate sj_popupMenuPageCell:self didSelectCellAtIndex:index];
+    if ([self.delegate respondsToSelector:@selector(JX_popupMenuPageCell:didSelectCellAtIndex:)]) {
+        [self.delegate JX_popupMenuPageCell:self didSelectCellAtIndex:index];
     }
 }
 

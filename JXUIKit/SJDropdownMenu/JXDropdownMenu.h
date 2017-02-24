@@ -1,15 +1,15 @@
 //
-//  SJDropdownMenu.h
-//  SJDropdownMenu
+//  JXDropdownMenu.h
+//  JXDropdownMenu
 //
-//  Created by zjx on 16/8/3.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/8/3.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface SJDropdownMenu : UIView
+@interface JXDropdownMenu : UIView
 
 -(UIColor*)tintColor;
 

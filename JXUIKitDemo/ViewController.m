@@ -2,8 +2,8 @@
 //  ViewController.m
 //  JXUIKitDemo
 //
-//  Created by zjx on 2017/2/22.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/22.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
 #import "ViewController.h"

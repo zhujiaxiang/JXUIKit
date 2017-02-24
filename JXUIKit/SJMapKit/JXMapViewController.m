@@ -1,15 +1,15 @@
 //
-//  SJMapViewController.m
-//  SJMapKit
+//  JXMapViewController.m
+//  JXMapKit
 //
-//  Created by zjx on 16/7/4.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/7/4.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJMapViewController.h"
+#import "JXMapViewController.h"
 
-#import "SJImageCropperView.h"
-#import "SJMapView.h"
+#import "JXImageCropperView.h"
+#import "JXMapView.h"
 
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
@@ -19,11 +19,11 @@
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 
-@interface SJMapViewController () <MKMapViewDelegate,
+@interface JXMapViewController () <MKMapViewDelegate,
                                    CLLocationManagerDelegate,
                                    UITextFieldDelegate>
 
-@property(nullable, nonatomic, strong) SJMapView *mapView;
+@property(nullable, nonatomic, strong) JXMapView *mapView;
 @property(nullable, nonatomic, strong) CLLocationManager *locationManager; // 定位管理
 @property(nonatomic, assign) int updateInt;                                // updateInt初始化为0，大于1时，didUpdateUserLocation中setRegion不再执行,保证只有一个小圆点
 @property(nonatomic, assign) int updateCorInt;
@@ -35,13 +35,13 @@
 @property(nullable, nonatomic, strong) UIImageView *annotationView;
 @property(nullable, nonatomic, strong) UILabel *titleLabel;
 @property(nullable, nonatomic, strong) UIButton *backButton;
-@property(nullable, nonatomic, strong) SJImageCropperView *cropper; // 截图工具
+@property(nullable, nonatomic, strong) JXImageCropperView *cropper; // 截图工具
 @property(nullable, nonatomic, strong) UIImage *mapImage;           // 地理位置截图
 @property(nullable, nonatomic, strong) NSMutableArray *annotationArray;
 
 @end
 
-@implementation SJMapViewController
+@implementation JXMapViewController
 
 - (void)viewDidLoad
 {
@@ -51,7 +51,7 @@
 
     self.mapView = ({
 
-        SJMapView *view = [[SJMapView alloc] init];
+        JXMapView *view = [[JXMapView alloc] init];
         view.delegate = self;
 
         [self.view addSubview:view];
@@ -148,7 +148,7 @@
 
     self.cropper = ({
 
-        SJImageCropperView *view = [[SJImageCropperView alloc] initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 900, 900)];
+        JXImageCropperView *view = [[JXImageCropperView alloc] initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 900, 900)];
         view.layer.borderWidth = 1.0;
         view.layer.borderColor = [UIColor redColor].CGColor;
 
@@ -176,7 +176,7 @@
     self.latitude = currLocation.coordinate.latitude;
     self.longitude = currLocation.coordinate.longitude;
     NSLog(@"la---%f, lo---%f", currLocation.coordinate.latitude, currLocation.coordinate.longitude);
-    [self sj_SetMapViewWithRegion:currLocation.coordinate];
+    [self JX_SetMapViewWithRegion:currLocation.coordinate];
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
         self.updateInt = 100;
@@ -203,7 +203,7 @@
 }
 
 //放大地图到自身的经纬度位置
-- (void)sj_SetMapViewWithRegion:(CLLocationCoordinate2D)myLocation
+- (void)JX_SetMapViewWithRegion:(CLLocationCoordinate2D)myLocation
 {
     if (self.updateInt >= 10) {
         return;
@@ -263,7 +263,7 @@
                            }
                        }];
 
-        if ([self.mapDelegate respondsToSelector:@selector(sj_mapViewController:currentLocationInfo:)]) {
+        if ([self.mapDelegate respondsToSelector:@selector(JX_mapViewController:currentLocationInfo:)]) {
             NSMutableDictionary *locationDictionary = [[NSMutableDictionary alloc] init];
             [locationDictionary setValue:[NSString stringWithFormat:@"%f", location.coordinate.latitude] forKey:@"earth_latitude"];
             [locationDictionary setValue:[NSString stringWithFormat:@"%f", location.coordinate.longitude] forKey:@"earth_longitude"];
@@ -273,7 +273,7 @@
             [locationDictionary setValue:[NSString stringWithFormat:@"%f", baiduLongitude] forKey:@"baidu_longitude"];
             [locationDictionary setValue:self.address forKey:@"address"];
 
-            [self.mapDelegate sj_mapViewController:self currentLocationInfo:locationDictionary];
+            [self.mapDelegate JX_mapViewController:self currentLocationInfo:locationDictionary];
         }
         break;
     }
@@ -285,7 +285,7 @@
 #pragma mark - Actions
 - (void)onClickMapView:(UIGestureRecognizer *)gestureRecognizer
 {
-    if ([self.mapDelegate respondsToSelector:@selector(sj_mapViewController:touchLocationInfo:)]) {
+    if ([self.mapDelegate respondsToSelector:@selector(JX_mapViewController:touchLocationInfo:)]) {
 
         CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView]; //这里touchPoint是点击的某点在地图控件中的位置
         CLLocationCoordinate2D touchMapCoordinate =
@@ -316,7 +316,7 @@
 
                        }];
 
-        [self.mapDelegate sj_mapViewController:self touchLocationInfo:locationDictionary];
+        [self.mapDelegate JX_mapViewController:self touchLocationInfo:locationDictionary];
     }
 }
 
@@ -324,7 +324,7 @@
 {
     CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
     self.updateInt = 9;
-    [self sj_SetMapViewWithRegion:location.coordinate];
+    [self JX_SetMapViewWithRegion:location.coordinate];
 }
 
 #pragma mark - 公用类
@@ -350,7 +350,7 @@
 
 - (void)cropperMap
 {
-    if ([self.mapDelegate respondsToSelector:@selector(sj_mapViewController:didFinishLocatingWithInfo:mapSnapshot:)]) {
+    if ([self.mapDelegate respondsToSelector:@selector(JX_mapViewController:didFinishLocatingWithInfo:mapSnapshot:)]) {
         self.mapView.showsUserLocation = NO;
         self.backButton.hidden = YES;
 
@@ -361,7 +361,7 @@
         UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         self.cropper.image = viewImage;
-        [self.cropper sj_FinishCropping];
+        [self.cropper JX_FinishCropping];
         self.cropper.hidden = YES;
 
         UIImageWriteToSavedPhotosAlbum(self.cropper.croppedImage, self, nil, nil);
@@ -375,7 +375,7 @@
         [locationDictionary setValue:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude] forKey:@"earth_latitude"];
         [locationDictionary setValue:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude] forKey:@"earth_longitude"];
 
-        [self.mapDelegate sj_mapViewController:self didFinishLocatingWithInfo:locationDictionary mapSnapshot:self.mapImage];
+        [self.mapDelegate JX_mapViewController:self didFinishLocatingWithInfo:locationDictionary mapSnapshot:self.mapImage];
     }
 }
 

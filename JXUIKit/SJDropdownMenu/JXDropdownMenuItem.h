@@ -1,9 +1,9 @@
 //
-//  SJDropdownMenuItem.h
-//  SJDropdownMenu
+//  JXDropdownMenuItem.h
+//  JXDropdownMenu
 //
-//  Created by zjx on 16/8/3.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/8/3.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,7 @@
 
 
 //UI层 数据模型
-@interface SJDropdownMenuItem : NSObject
+@interface JXDropdownMenuItem : NSObject
 
 @property (readwrite, nonatomic, strong) UIImage *image;
 @property (readwrite, nonatomic, strong) NSString *title;

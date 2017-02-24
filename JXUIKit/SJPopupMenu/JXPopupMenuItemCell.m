@@ -1,17 +1,17 @@
 //
-//  SJPopupMenuItemCell.m
-//  SJPopupMenu
+//  JXPopupMenuItemCell.m
+//  JXPopupMenu
 //
-//  Created by zjx on 16/7/22.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/7/22.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJPopupMenuItemCell.h"
+#import "JXPopupMenuItemCell.h"
 
 // 3rd
 #import <Masonry/Masonry.h>
 
-@implementation SJPopupMenuItemCell
+@implementation JXPopupMenuItemCell
 
 #pragma mark - init
 - (id)initWithFrame:(CGRect)frame

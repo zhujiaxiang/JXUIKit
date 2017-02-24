@@ -1,17 +1,17 @@
 //
-//  SJDropdownMenu.m
-//  SJDropdownMenu
+//  JXDropdownMenu.m
+//  JXDropdownMenu
 //
-//  Created by zjx on 16/8/3.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/8/3.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 
-#import "SJDropdownMenu.h"
-#import "SJDropdownMenuItem.h"
+#import "JXDropdownMenu.h"
+#import "JXDropdownMenuItem.h"
 
 static UIColor *gTintColor;
 static UIFont *gTitleFont;
 
-@interface SJDropdownMenu ()
+@interface JXDropdownMenu ()
 
 @property(nonatomic, retain) UIControl *overlayView; //模态背景
 @property(nonatomic, assign) CGFloat arrowPosition;
@@ -20,7 +20,7 @@ static UIFont *gTitleFont;
 
 @end
 
-@implementation SJDropdownMenu
+@implementation JXDropdownMenu
 
 - (id)init {
   self = [super initWithFrame:CGRectZero];
@@ -59,7 +59,7 @@ static UIFont *gTitleFont;
 - (void)showMenuFromRect:(CGRect)rect menuItems:(NSArray *)menuTems {
   _menuItems = menuTems;
 
-  for (SJDropdownMenuItem *menuItem in _menuItems) //中间对齐
+  for (JXDropdownMenuItem *menuItem in _menuItems) //中间对齐
   {
     menuItem.alignment = NSTextAlignmentCenter;
   }
@@ -88,7 +88,7 @@ static UIFont *gTitleFont;
       }];
 }
 
-- (UIImage *)sj_imageWithColor:(UIColor *)color {
+- (UIImage *)JX_imageWithColor:(UIColor *)color {
   CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
   UIGraphicsBeginImageContext(rect.size);
   CGContextRef context = UIGraphicsGetCurrentContext();
@@ -122,7 +122,7 @@ static UIFont *gTitleFont;
   CGFloat maxItemHeight = 0;
   CGFloat maxItemWidth = 0;
 
-  for (SJDropdownMenuItem *menuItem in _menuItems) {
+  for (JXDropdownMenuItem *menuItem in _menuItems) {
 
     const CGSize imageSize = menuItem.image.size;
     if (imageSize.width > maxImageWidth)
@@ -133,7 +133,7 @@ static UIFont *gTitleFont;
     maxImageWidth += kMarginX;
   }
 
-  for (SJDropdownMenuItem *menuItem in _menuItems) {
+  for (JXDropdownMenuItem *menuItem in _menuItems) {
       
     [UIFont fontWithName:@"Heiti SC" size:12];
     const CGSize titleSize = [menuItem.title sizeWithFont:titleFont];
@@ -160,11 +160,11 @@ static UIFont *gTitleFont;
   const CGFloat titleWidth = maxItemWidth - titleX - kMarginX * 2;
 
   UIImage *selectedImage =
-      [self sj_imageWithColor:[UIColor colorWithWhite:0.8
+      [self JX_imageWithColor:[UIColor colorWithWhite:0.8
                                                 alpha:0.9]];
 
   UIImage *gradientLine =
-      [SJDropdownMenu gradientLine:(CGSize){maxItemWidth, 1}];
+      [JXDropdownMenu gradientLine:(CGSize){maxItemWidth, 1}];
 
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
   contentView.autoresizingMask = UIViewAutoresizingNone;
@@ -174,7 +174,7 @@ static UIFont *gTitleFont;
   CGFloat itemY = kMarginY * 2;
   NSUInteger itemNum = 0;
 
-  for (SJDropdownMenuItem *menuItem in _menuItems) {
+  for (JXDropdownMenuItem *menuItem in _menuItems) {
 
     const CGRect itemFrame = (CGRect){0, itemY, maxItemWidth, maxItemHeight};
 
@@ -269,7 +269,7 @@ static UIFont *gTitleFont;
   [self dismissMenu:YES];
 
   UIButton *button = (UIButton *)sender;
-  SJDropdownMenuItem *menuItem = _menuItems[button.tag];
+  JXDropdownMenuItem *menuItem = _menuItems[button.tag];
   [menuItem performAction];
 }
 

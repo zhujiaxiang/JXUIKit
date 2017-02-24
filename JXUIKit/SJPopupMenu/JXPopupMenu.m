@@ -1,20 +1,20 @@
 //
-//  SJPopupMenu.m
-//  SJPopupMenu
+//  JXPopupMenu.m
+//  JXPopupMenu
 //
-//  Created by zjx on 16/7/19.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/7/19.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJPopupMenu.h"
-#import "SJPopupMenuItem.h"
-#import "SJPopupMenuItemCell.h"
-#import "SJPopupMenuPageCell.h"
+#import "JXPopupMenu.h"
+#import "JXPopupMenuItem.h"
+#import "JXPopupMenuItemCell.h"
+#import "JXPopupMenuPageCell.h"
 
 #import <Masonry/Masonry.h>
-@interface SJPopupMenu () <UICollectionViewDataSource, UICollectionViewDelegate,
+@interface JXPopupMenu () <UICollectionViewDataSource, UICollectionViewDelegate,
                            UICollectionViewDelegateFlowLayout,
-                           SJPageCellDelegate>
+                           JXPageCellDelegate>
 
 @property(nullable, nonatomic, strong) UICollectionView *menuCollectionView;
 
@@ -29,9 +29,9 @@
 
 @end
 
-@implementation SJPopupMenu
+@implementation JXPopupMenu
 
-- (instancetype)initWithNumberOfLines:(NSInteger)numberOfLines numberOfColumns:(NSInteger)numberOfColumns itemList:(NSArray<SJPopupMenuItem *> *)itemList
+- (instancetype)initWithNumberOfLines:(NSInteger)numberOfLines numberOfColumns:(NSInteger)numberOfColumns itemList:(NSArray<JXPopupMenuItem *> *)itemList
 {
     self = [super init];
 
@@ -125,8 +125,8 @@
             view.dataSource = self;
             view.delegate = self;
 
-            NSString *identifier = NSStringFromClass([SJPopupMenuPageCell class]);
-            [view registerClass:[SJPopupMenuPageCell class] forCellWithReuseIdentifier:identifier];
+            NSString *identifier = NSStringFromClass([JXPopupMenuPageCell class]);
+            [view registerClass:[JXPopupMenuPageCell class] forCellWithReuseIdentifier:identifier];
 
             [self addSubview:view];
 
@@ -246,9 +246,9 @@
                                                0);
     flowLayout.itemSize = CGSizeMake(80.0, 80.0);
 
-    NSString *identifier = NSStringFromClass([SJPopupMenuPageCell class]);
+    NSString *identifier = NSStringFromClass([JXPopupMenuPageCell class]);
 
-    SJPopupMenuPageCell *cell = [collectionView
+    JXPopupMenuPageCell *cell = [collectionView
         dequeueReusableCellWithReuseIdentifier:identifier
                                   forIndexPath:indexPath];
 
@@ -263,11 +263,11 @@
     return cell;
 }
 
-#pragma mark - SJPageCellDelegate
-- (void)sj_popupMenuPageCell:(SJPopupMenuPageCell *)Pagecell didSelectCellAtIndex:(NSInteger)index
+#pragma mark - JXPageCellDelegate
+- (void)JX_popupMenuPageCell:(JXPopupMenuPageCell *)Pagecell didSelectCellAtIndex:(NSInteger)index
 {
-    if ([self.delegate respondsToSelector:@selector(sj_popupMenu:didSelectMenuItemAtIndex:)]) {
-        [self.delegate sj_popupMenu:self didSelectMenuItemAtIndex:self.pageControl.currentPage * self.numberOfColumns * self.numberOfLines + index];
+    if ([self.delegate respondsToSelector:@selector(JX_popupMenu:didSelectMenuItemAtIndex:)]) {
+        [self.delegate JX_popupMenu:self didSelectMenuItemAtIndex:self.pageControl.currentPage * self.numberOfColumns * self.numberOfLines + index];
     }
 }
 
@@ -301,8 +301,8 @@
 #pragma mark - Actions
 - (void)completeButtonTapped:(UIButton *)sender
 {
-    if ([self.delegate respondsToSelector:@selector(sj_popupMenu:didClickCancelButton:)]) {
-        [self.delegate sj_popupMenu:self didClickCancelButton:sender];
+    if ([self.delegate respondsToSelector:@selector(JX_popupMenu:didClickCancelButton:)]) {
+        [self.delegate JX_popupMenu:self didClickCancelButton:sender];
     }
 }
 @end

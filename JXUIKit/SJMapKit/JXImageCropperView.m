@@ -1,23 +1,23 @@
 //
-//  SJImageCropperView.m
-//  SJMapKit
+//  JXImageCropperView.m
+//  JXMapKit
 //
-//  Created by zjx on 16/7/8.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/7/8.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJImageCropperView.h"
+#import "JXImageCropperView.h"
 #import <QuartzCore/QuartzCore.h>
 #include <math.h>
 
-@interface SJImageCropperView ()
+@interface JXImageCropperView ()
 
 @property (nonatomic, strong)UIImageView *imageView;
 @property (nonatomic, assign)CGSize originalImageViewSize;
 
 @end
 
-@implementation SJImageCropperView
+@implementation JXImageCropperView
 
 #pragma mark - Init
 - (id)initWithFrame:(CGRect)frame {
@@ -25,7 +25,7 @@
     
     if (self) {
         self.frame = frame;
-        [self sj_ImageCropperSetUp];
+        [self JX_ImageCropperSetUp];
     }
 
     return self;
@@ -43,13 +43,13 @@
 }
 
 // Methods
-- (void)sj_ImageCropperSetUp
+- (void)JX_ImageCropperSetUp
 {
     [self addSubview:self.imageView];
 }
 
 
-- (void)sj_FinishCropping
+- (void)JX_FinishCropping
 {
     //计算缩小
     float _imageScale = self.image.size.width/self.originalImageViewSize.width;
@@ -72,7 +72,7 @@
     CGImageRelease(tmp);
 }
 
-- (void)sj_Reset
+- (void)JX_Reset
 {
     self.imageView.transform = CGAffineTransformIdentity;
 }

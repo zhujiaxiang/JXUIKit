@@ -1,28 +1,28 @@
 //
-//  SJSearchController.h
-//  SJSearchController
+//  JXSearchController.h
+//  JXSearchController
 //
-//  Created by zjx on 16/5/10.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/5/10.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class SJSearchController;
+@class JXSearchController;
 
-@protocol SJSearchControllerDelegate <NSObject, UISearchControllerDelegate>
+@protocol JXSearchControllerDelegate <NSObject, UISearchControllerDelegate>
 
 @optional
 
-//- (void)sj_searchController:(SJSearchController *)searchController
+//- (void)JX_searchController:(JXSearchController *)searchController
 
 @end
 
-@interface SJSearchController : UISearchController
+@interface JXSearchController : UISearchController
 
 @property(nonatomic, assign) BOOL allowVoiceSearch;
 
-@property(nullable, nonatomic, weak) id<SJSearchControllerDelegate> delegate;
+@property(nullable, nonatomic, weak) id<JXSearchControllerDelegate> delegate;
 
 /*
     搜索数组，返回新的数组。

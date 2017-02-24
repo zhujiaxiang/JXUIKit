@@ -1,12 +1,12 @@
 //
-//  SJSearchController.m
-//  SJSearchController
+//  JXSearchController.m
+//  JXSearchController
 //
-//  Created by zjx on 16/5/10.
-//  Copyright © 2016年 sj. All rights reserved.
+//  Created by 朱佳翔 on 16/5/10.
+//  Copyright © 2016年 朱佳翔. All rights reserved.
 //
 
-#import "SJSearchController.h"
+#import "JXSearchController.h"
 
 // 3rd
 #import <iflyMSC/iflyMSC.h>
@@ -30,7 +30,7 @@ static NSString *const kAccent = @"mandarin";
 static float const kSampleRate = 16000;
 static BOOL kDot = NO;
 
-@interface SJSearchController () <UISearchBarDelegate,
+@interface JXSearchController () <UISearchBarDelegate,
                                   IFlyRecognizerViewDelegate>
 
 @property(nonatomic, strong) UIButton *voiceButton;
@@ -38,7 +38,7 @@ static BOOL kDot = NO;
 
 @end
 
-@implementation SJSearchController
+@implementation JXSearchController
 
 @synthesize delegate;
 
