@@ -3,6 +3,14 @@
 ### 介绍
 使用 QLPreviewController 进行预览
 
+Quicklook 支持的文件：
+iWork文档
+微软Office97以上版本的文档
+RTF文档
+PDF文件
+图片文件
+文本文件和CSV文件
+
 下载方式采用NSURLSession
 
 缓存方式为磁盘缓存
