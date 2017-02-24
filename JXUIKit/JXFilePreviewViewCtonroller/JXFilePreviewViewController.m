@@ -1,14 +1,14 @@
 //
-//  SJFilePreviewViewController.m
-//  SJFilePreviewKit
+//  JXFilePreviewViewController.m
+//  JXFilePreviewViewController
 //
-//  Created by zjx on 2017/2/17.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/23.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
-#import "SJFilePreviewViewController.h"
+#import "JXFilePreviewViewController.h"
 
-@interface SJFilePreviewViewController () <QLPreviewControllerDelegate,QLPreviewControllerDataSource>
+@interface JXFilePreviewViewController () <QLPreviewControllerDelegate,QLPreviewControllerDataSource>
 
 @property (nonnull, nonatomic, copy) NSURL *webFileURL;
 @property (nonnull, nonatomic, copy) NSURL *localFileURL;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation SJFilePreviewViewController
+@implementation JXFilePreviewViewController
 
 #pragma mark - Init
 

@@ -1,20 +1,20 @@
 //
-//  SJFileDownloader.m
-//  SJFilePreviewViewController
+//  JXFileDownloader.m
+//  JXFilePreviewViewController
 //
-//  Created by zjx on 2017/2/23.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/23.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
-#import "SJFileDownloader.h"
-#import "SJFileCache.h"
+#import "JXFileDownloader.h"
+#import "JXFileCache.h"
 
 static NSString *const sFileCacheDirName = @"FileCache";
 
-@interface SJFileDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
+@interface JXFileDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
-@property (nonatomic, copy) SJFileDownloadProgressCompletionBlock progressBlock;
-@property (nonatomic, copy) SJFileDownloadCompletionBlock completedBlock;
+@property (nonatomic, copy) JXFileDownloadProgressCompletionBlock progressBlock;
+@property (nonatomic, copy) JXFileDownloadCompletionBlock completedBlock;
 
 @property (strong, nonatomic) NSMutableData *imageData;
 
@@ -22,7 +22,7 @@ static NSString *const sFileCacheDirName = @"FileCache";
 
 @end
 
-@implementation SJFileDownloader
+@implementation JXFileDownloader
 
 + (instancetype)sharedDownloader
 {
@@ -35,7 +35,7 @@ static NSString *const sFileCacheDirName = @"FileCache";
 }
 
 
-- (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable SJFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull SJFileDownloadCompletionBlock)completedBlock
+- (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable JXFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull JXFileDownloadCompletionBlock)completedBlock
 {
 //    // Session
 //    NSURLSession *session = [NSURLSession sharedSession];
@@ -57,7 +57,7 @@ static NSString *const sFileCacheDirName = @"FileCache";
 //            NSString *cacheDirectory = [paths objectAtIndex:0];
 //            NSFileManager *fm = [NSFileManager defaultManager];
 //            NSString *dirPath = [NSString stringWithFormat:@"%@/%@/%@", cacheDirectory, [NSBundle mainBundle].bundleIdentifier, sFileCacheDirName];
-//            NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", dirPath, [fileURL.absoluteString sj_md5], [fileURL pathExtension]];
+//            NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", dirPath, [fileURL.absoluteString JX_md5], [fileURL pathExtension]];
 //            
 //            BOOL createDirectorySuccess = [fm createDirectoryAtPath:dirPath
 //                                        withIntermediateDirectories:YES

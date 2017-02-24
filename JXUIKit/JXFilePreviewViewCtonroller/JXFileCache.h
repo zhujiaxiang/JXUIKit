@@ -1,14 +1,14 @@
 //
-//  SJFileCache.h
-//  SJFilePreviewViewController
+//  JXFileCache.h
+//  JXFilePreviewViewController
 //
-//  Created by zjx on 2017/2/23.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/23.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SJFileCache : NSObject
+@interface JXFileCache : NSObject
 
 + (nullable instancetype)sharedCache;
 
@@ -16,7 +16,7 @@
 
 - (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key;
 
-- (nullable NSString *)getFilePathByDiskCachePath:(nonnull NSString *)path fileName:(nullable NSString *)name;
+- (nullable NSString *)getFilePathByFullNamespace:(nonnull NSString *)fullNamespace fileName:(nullable NSString *)name;
 
 - (nullable NSString *)getlocalFileURLByPath:(nullable NSString *)path contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr;
 

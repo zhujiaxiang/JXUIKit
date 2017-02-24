@@ -38,12 +38,12 @@
 		6470AE3A1E5D32D80057287C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE391E5D32D80057287C /* Assets.xcassets */; };
 		6470AE3D1E5D32D80057287C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470AE3B1E5D32D80057287C /* LaunchScreen.storyboard */; };
 		649DFA921E51C48900B65AEE /* JXUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 649DFA901E51C48900B65AEE /* JXUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64AE58A31E604A6F0065D9DC /* JXFileDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 64AE58A11E604A6F0065D9DC /* JXFileDownloader.h */; };
+		64AE58A41E604A6F0065D9DC /* JXFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AE58A21E604A6F0065D9DC /* JXFileDownloader.m */; };
+		64AE58A71E604A800065D9DC /* JXFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 64AE58A51E604A800065D9DC /* JXFileCache.h */; };
+		64AE58A81E604A800065D9DC /* JXFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AE58A61E604A800065D9DC /* JXFileCache.m */; };
 		64D01D671E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D5E1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h */; };
 		64D01D681E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D5F1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m */; };
-		64D01D691E5EF0CD00C7EDD4 /* JXFileDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D601E5EF0CD00C7EDD4 /* JXFileDownloader.h */; };
-		64D01D6A1E5EF0CD00C7EDD4 /* JXFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D611E5EF0CD00C7EDD4 /* JXFileDownloader.m */; };
-		64D01D6B1E5EF0CD00C7EDD4 /* JXFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D631E5EF0CD00C7EDD4 /* JXFileCache.h */; };
-		64D01D6C1E5EF0CD00C7EDD4 /* JXFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D641E5EF0CD00C7EDD4 /* JXFileCache.m */; };
 		64D01D6F1E5EF0EE00C7EDD4 /* JXFileLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D6D1E5EF0EE00C7EDD4 /* JXFileLoadingView.h */; };
 		64D01D701E5EF0EE00C7EDD4 /* JXFileLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D6E1E5EF0EE00C7EDD4 /* JXFileLoadingView.m */; };
 		E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */; };
@@ -88,12 +88,12 @@
 		649DFA8D1E51C48900B65AEE /* JXUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DFA901E51C48900B65AEE /* JXUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXUIKit.h; sourceTree = "<group>"; };
 		649DFA911E51C48900B65AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64AE58A11E604A6F0065D9DC /* JXFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXFileDownloader.h; path = JXFilePreviewViewCtonroller/JXFileDownloader.h; sourceTree = "<group>"; };
+		64AE58A21E604A6F0065D9DC /* JXFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileDownloader.m; path = JXFilePreviewViewCtonroller/JXFileDownloader.m; sourceTree = "<group>"; };
+		64AE58A51E604A800065D9DC /* JXFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXFileCache.h; path = JXFilePreviewViewCtonroller/JXFileCache.h; sourceTree = "<group>"; };
+		64AE58A61E604A800065D9DC /* JXFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileCache.m; path = JXFilePreviewViewCtonroller/JXFileCache.m; sourceTree = "<group>"; };
 		64D01D5E1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFilePreviewViewController.h; sourceTree = "<group>"; };
 		64D01D5F1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFilePreviewViewController.m; sourceTree = "<group>"; };
-		64D01D601E5EF0CD00C7EDD4 /* JXFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXFileDownloader.h; path = SJFilePreviewViewController/JXFileDownloader.h; sourceTree = "<group>"; };
-		64D01D611E5EF0CD00C7EDD4 /* JXFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileDownloader.m; path = SJFilePreviewViewController/JXFileDownloader.m; sourceTree = "<group>"; };
-		64D01D631E5EF0CD00C7EDD4 /* JXFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXFileCache.h; path = SJFilePreviewViewController/JXFileCache.h; sourceTree = "<group>"; };
-		64D01D641E5EF0CD00C7EDD4 /* JXFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileCache.m; path = SJFilePreviewViewController/JXFileCache.m; sourceTree = "<group>"; };
 		64D01D6D1E5EF0EE00C7EDD4 /* JXFileLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFileLoadingView.h; sourceTree = "<group>"; };
 		64D01D6E1E5EF0EE00C7EDD4 /* JXFileLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFileLoadingView.m; sourceTree = "<group>"; };
 		8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,8 +141,7 @@
 				6450B43C1E5C36300031309F /* JXPopupView.h */,
 				6450B43D1E5C36300031309F /* JXPopupView.m */,
 			);
-			name = JXPopupMenu;
-			path = SJPopupMenu;
+			path = JXPopupMenu;
 			sourceTree = "<group>";
 		};
 		6450B4481E5C37B40031309F /* JXDropdownMenu */ = {
@@ -153,8 +152,7 @@
 				6450B44B1E5C37B40031309F /* JXDropdownMenuItem.h */,
 				6450B44C1E5C37B40031309F /* JXDropdownMenuItem.m */,
 			);
-			name = JXDropdownMenu;
-			path = SJDropdownMenu;
+			path = JXDropdownMenu;
 			sourceTree = "<group>";
 		};
 		6450B4511E5C38CB0031309F /* JXMapKit */ = {
@@ -168,8 +166,7 @@
 				6450B4571E5C38CB0031309F /* JXMapViewController.h */,
 				6450B4581E5C38CB0031309F /* JXMapViewController.m */,
 			);
-			name = JXMapKit;
-			path = SJMapKit;
+			path = JXMapKit;
 			sourceTree = "<group>";
 		};
 		6450B4751E5C3A8B0031309F /* JXSearchController */ = {
@@ -178,8 +175,7 @@
 				6450B4761E5C3A8B0031309F /* JXSearchController.h */,
 				6450B4771E5C3A8B0031309F /* JXSearchController.m */,
 			);
-			name = JXSearchController;
-			path = SJSearchController;
+			path = JXSearchController;
 			sourceTree = "<group>";
 		};
 		6470AE2C1E5D32D80057287C /* JXUIKitDemo */ = {
@@ -244,8 +240,8 @@
 		64D01D621E5EF0CD00C7EDD4 /* JXFileDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				64D01D601E5EF0CD00C7EDD4 /* JXFileDownloader.h */,
-				64D01D611E5EF0CD00C7EDD4 /* JXFileDownloader.m */,
+				64AE58A11E604A6F0065D9DC /* JXFileDownloader.h */,
+				64AE58A21E604A6F0065D9DC /* JXFileDownloader.m */,
 			);
 			name = JXFileDownloader;
 			path = ..;
@@ -254,8 +250,8 @@
 		64D01D651E5EF0CD00C7EDD4 /* JXFileCache */ = {
 			isa = PBXGroup;
 			children = (
-				64D01D631E5EF0CD00C7EDD4 /* JXFileCache.h */,
-				64D01D641E5EF0CD00C7EDD4 /* JXFileCache.m */,
+				64AE58A51E604A800065D9DC /* JXFileCache.h */,
+				64AE58A61E604A800065D9DC /* JXFileCache.m */,
 			);
 			name = JXFileCache;
 			path = ..;
@@ -271,7 +267,7 @@
 				64D01D711E5EF0F500C7EDD4 /* JXFileLoadingView */,
 			);
 			name = JXFilePreviewViewController;
-			path = ../../SJFilePreviewViewController/SJFilePreviewViewController;
+			path = JXFilePreviewViewCtonroller;
 			sourceTree = "<group>";
 		};
 		64D01D711E5EF0F500C7EDD4 /* JXFileLoadingView */ = {
@@ -304,12 +300,12 @@
 				64D01D671E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h in Headers */,
 				6450B45E1E5C38CB0031309F /* JXMapViewController.h in Headers */,
 				6450B45B1E5C38CB0031309F /* JXMapKit.h in Headers */,
-				64D01D6B1E5EF0CD00C7EDD4 /* JXFileCache.h in Headers */,
 				6450B4781E5C3A8B0031309F /* JXSearchController.h in Headers */,
-				64D01D691E5EF0CD00C7EDD4 /* JXFileDownloader.h in Headers */,
 				6450B4421E5C36300031309F /* JXPopupMenuItemCell.h in Headers */,
 				6450B44D1E5C37B40031309F /* JXDropdownMenu.h in Headers */,
+				64AE58A71E604A800065D9DC /* JXFileCache.h in Headers */,
 				6450B4401E5C36300031309F /* JXPopupMenuItem.h in Headers */,
+				64AE58A31E604A6F0065D9DC /* JXFileDownloader.h in Headers */,
 				6450B4441E5C36300031309F /* JXPopupMenuPageCell.h in Headers */,
 				6450B45C1E5C38CB0031309F /* JXMapView.h in Headers */,
 				6450B4461E5C36300031309F /* JXPopupView.h in Headers */,
@@ -474,13 +470,13 @@
 				6450B4791E5C3A8B0031309F /* JXSearchController.m in Sources */,
 				6450B45F1E5C38CB0031309F /* JXMapViewController.m in Sources */,
 				6450B4471E5C36300031309F /* JXPopupView.m in Sources */,
+				64AE58A81E604A800065D9DC /* JXFileCache.m in Sources */,
 				64D01D701E5EF0EE00C7EDD4 /* JXFileLoadingView.m in Sources */,
-				64D01D6C1E5EF0CD00C7EDD4 /* JXFileCache.m in Sources */,
 				6450B45A1E5C38CB0031309F /* JXImageCropperView.m in Sources */,
 				6450B4411E5C36300031309F /* JXPopupMenuItem.m in Sources */,
-				64D01D6A1E5EF0CD00C7EDD4 /* JXFileDownloader.m in Sources */,
 				6450B45D1E5C38CB0031309F /* JXMapView.m in Sources */,
 				64D01D681E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m in Sources */,
+				64AE58A41E604A6F0065D9DC /* JXFileDownloader.m in Sources */,
 				6450B4451E5C36300031309F /* JXPopupMenuPageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

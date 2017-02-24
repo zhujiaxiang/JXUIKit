@@ -1,14 +1,14 @@
 //
-//  SJFileLoadingView.m
-//  SJFilePreviewKit
+//  JXFileLoadingView.m
+//  JXUIKit
 //
-//  Created by zjx on 2017/2/17.
-//  Copyright © 2017年 zjx. All rights reserved.
+//  Created by 朱佳翔 on 2017/2/23.
+//  Copyright © 2017年 朱佳翔. All rights reserved.
 //
 
-#import "SJFileLoadingView.h"
-    
-@implementation SJFileLoadingView
+#import "JXFileLoadingView.h"
+
+@implementation JXFileLoadingView
 
 /*
 // Only override drawRect: if you perform custom drawing.
