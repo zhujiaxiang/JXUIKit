@@ -52,7 +52,7 @@ static NSString *const sFileCacheDirName = @"FileCache";
     //构建指定文件缓存目录
     NSString *dirPath = [NSString stringWithFormat:@"%@/%@/%@", cacheDirectory, [NSBundle mainBundle].bundleIdentifier, sFileCacheDirName];
     //构建缓存文件的路径
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", dirPath, [self cachedFileNameForKey:url.absoluteString], [url pathExtension]];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@", dirPath, [self cachedFileNameForKey:url.absoluteString]];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     if (![fm fileExistsAtPath:dirPath]) {

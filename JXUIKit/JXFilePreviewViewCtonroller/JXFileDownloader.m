@@ -9,7 +9,8 @@
 #import "JXFileDownloader.h"
 #import "JXFileCache.h"
 
-static NSString *const sFileCacheDirName = @"FileCache";
+static NSString *const jFileCacheDirName = @"FileCache";
+static NSString *const jDefaultNamespace = @"default";
 
 @interface JXFileDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
@@ -37,46 +38,25 @@ static NSString *const sFileCacheDirName = @"FileCache";
 
 - (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable JXFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull JXFileDownloadCompletionBlock)completedBlock
 {
-//    // Session
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    
-//    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:fileURL completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        
-//        NSURL *localFileURL = nil;
-//        NSData *fileData = [NSData dataWithContentsOfURL:location];
-//        
-//        if (fileData) {
-//            
-//            
-//            
-//            
-//            
-//            
-//            
-//            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-//            NSString *cacheDirectory = [paths objectAtIndex:0];
-//            NSFileManager *fm = [NSFileManager defaultManager];
-//            NSString *dirPath = [NSString stringWithFormat:@"%@/%@/%@", cacheDirectory, [NSBundle mainBundle].bundleIdentifier, sFileCacheDirName];
-//            NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", dirPath, [fileURL.absoluteString JX_md5], [fileURL pathExtension]];
-//            
-//            BOOL createDirectorySuccess = [fm createDirectoryAtPath:dirPath
-//                                        withIntermediateDirectories:YES
-//                                                         attributes:nil
-//                                                              error:nil];
-//            if (createDirectorySuccess) {
-//                BOOL createFileSuccess = [fm createFileAtPath:filePath
-//                                                     contents:fileData
-//                                                   attributes:nil];
-//                if (createFileSuccess) {
-//                    localFileURL = [NSURL fileURLWithPath:filePath];
-//                }
-//            }
-//        }
-//        !completedBlock ?: completedBlock(localFileURL, error);
-//        
-//    }];
-//    
-//    [downloadTask resume];
+    // Session
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:fileURL
+                                                        completionHandler:^(NSURL *_Nullable location, NSURLResponse *_Nullable response, NSError *_Nullable error) {
+                                                            
+                                                            NSURL *localFileURL = nil;
+                                                            NSData *fileData = [NSData dataWithContentsOfURL:location];
+                                                            
+                                                            if (fileData) {
+                                                                
+                                                                localFileURL = [[JXFileCache sharedCache] getLocalFileURLByFullNamespace:jDefaultNamespace URL:fileURL contents:fileData attributes:nil];
+                                                            }
+                                                            !completedBlock ?: completedBlock(localFileURL, error);
+                                                            
+                                                        }];
+    
+    [downloadTask resume];
+
 }
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
