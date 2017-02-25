@@ -44,23 +44,28 @@ static NSString *const sFileCacheDirName = @"FileCache";
     return filename;
 }
 
-- (nullable NSString *)getFilePathByFullNamespace:(nonnull NSString *)fullNamespace URL:(NSURL *)url
+- (nullable NSURL *)getLocalFileURLByFullNamespace:(nullable NSString *)fullNamespace URL:(nonnull NSURL *)url contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr
 {
+    NSURL *localFileURL = nil;
     //构建缓存目录
     NSString *cacheDirectory = [self makeDiskCachePath:fullNamespace];
     //构建指定文件缓存目录
     NSString *dirPath = [NSString stringWithFormat:@"%@/%@/%@", cacheDirectory, [NSBundle mainBundle].bundleIdentifier, sFileCacheDirName];
     //构建缓存文件的路径
     NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", dirPath, [self cachedFileNameForKey:url.absoluteString], [url pathExtension]];
-
-    return filePath;
-}
-
-- (nullable NSString *)getlocalFileURLByPath:(nullable NSString *)path contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr
-{
+    
     NSFileManager *fm = [NSFileManager defaultManager];
-
-    return nil;
+    if (![fm fileExistsAtPath:dirPath]) {
+        [fm createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    BOOL createFileSuccess = [fm createFileAtPath:filePath
+                                         contents:data
+                                       attributes:nil];
+    if (createFileSuccess) {
+        localFileURL = [NSURL fileURLWithPath:filePath];
+    }
+    
+    return localFileURL;
 }
 
 @end
