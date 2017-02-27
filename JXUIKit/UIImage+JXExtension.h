@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (SJExtension)
+@interface UIImage (JXExtension)
 
 + (nullable instancetype)jx_imageWithColor:(nonnull UIColor *)color;
 
