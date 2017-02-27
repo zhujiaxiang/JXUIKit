@@ -48,19 +48,24 @@ static NSString *const sFileCacheDirName = @"FileCache";
 {
     NSURL *localFileURL = nil;
     //构建缓存目录
-    NSString *cacheDirectory = [self makeDiskCachePath:fullNamespace];
-    //构建指定文件缓存目录
-    NSString *dirPath = [NSString stringWithFormat:@"%@/%@/%@", cacheDirectory, [NSBundle mainBundle].bundleIdentifier, sFileCacheDirName];
+    NSString *dirPath = nil;
+    
+    if (fullNamespace) {
+        dirPath = [self makeDiskCachePath:fullNamespace];
+    } else {
+        [self makeDiskCachePath:[NSBundle mainBundle].bundleIdentifier];
+    }
+    
     //构建缓存文件的路径
     NSString *filePath = [NSString stringWithFormat:@"%@/%@", dirPath, [self cachedFileNameForKey:url.absoluteString]];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     if (![fm fileExistsAtPath:dirPath]) {
-        [fm createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:NULL];
+        [fm createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:attr error:NULL];
     }
     BOOL createFileSuccess = [fm createFileAtPath:filePath
                                          contents:data
-                                       attributes:nil];
+                                       attributes:attr];
     if (createFileSuccess) {
         localFileURL = [NSURL fileURLWithPath:filePath];
     }

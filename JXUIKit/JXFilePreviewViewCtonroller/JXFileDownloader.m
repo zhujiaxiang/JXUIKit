@@ -9,17 +9,16 @@
 #import "JXFileDownloader.h"
 #import "JXFileCache.h"
 
-static NSString *const jFileCacheDirName = @"FileCache";
-static NSString *const jDefaultNamespace = @"default";
+static NSString *const kDefaultNamespace = @"com.zjx.JXFileCache";
 
-@interface JXFileDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
+@interface JXFileDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
 
-@property (nonatomic, copy) JXFileDownloadProgressCompletionBlock progressBlock;
-@property (nonatomic, copy) JXFileDownloadCompletionBlock completedBlock;
+@property(nonatomic, copy) JXFileDownloadProgressCompletionBlock progressBlock;
+@property(nonatomic, copy) JXFileDownloadCompletionBlock completedBlock;
 
-@property (strong, nonatomic) NSMutableData *imageData;
-
-@property (strong, atomic) NSThread *thread;
+@property(nonatomic, strong) NSMutableData *fileData;
+@property(nonatomic, assign) NSInteger expectedSize;
+@property(nonatomic, strong) NSURL *fileURL;
 
 @end
 
@@ -35,43 +34,47 @@ static NSString *const jDefaultNamespace = @"default";
     return instance;
 }
 
-
 - (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable JXFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull JXFileDownloadCompletionBlock)completedBlock
 {
     // Session
-    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                          delegate:self
+                                                     delegateQueue:nil];
     
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:fileURL
-                                                        completionHandler:^(NSURL *_Nullable location, NSURLResponse *_Nullable response, NSError *_Nullable error) {
-                                                            
-                                                            NSURL *localFileURL = nil;
-                                                            NSData *fileData = [NSData dataWithContentsOfURL:location];
-                                                            
-                                                            if (fileData) {
-                                                                
-                                                                localFileURL = [[JXFileCache sharedCache] getLocalFileURLByFullNamespace:jDefaultNamespace URL:fileURL contents:fileData attributes:nil];
-                                                            }
-                                                            !completedBlock ?: completedBlock(localFileURL, error);
-                                                            
-                                                        }];
+    self.fileURL = fileURL;
+    
+    self.progressBlock = progressBlock;
+    self.completedBlock = completedBlock;
+    
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:fileURL];
     
     [downloadTask resume];
-
+}
+#pragma mark - NSURLSessionDataDelegate
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
+      didWriteData:(int64_t)bytesWritten
+ totalBytesWritten:(int64_t)totalBytesWritten
+totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
+{
+    NSLog(@"%lf", 1.0 * totalBytesWritten / totalBytesExpectedToWrite);
+    self.progressBlock(totalBytesWritten, totalBytesExpectedToWrite);
 }
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
 {
-    /*
-     bytesWritten               本次写入的字节数
-     totalBytesWritten          已经写入的字节数
-     totalBytesExpectedToWrite  下载文件总字节数
-     */
     
-    if(self.progressBlock){
-        self.progressBlock(totalBytesWritten,totalBytesExpectedToWrite);
+    NSURL *localFileURL = nil;
+    NSData *fileData = [NSData dataWithContentsOfURL:location];
+    
+    if (fileData) {
+        localFileURL = [[JXFileCache sharedCache] getLocalFileURLByFullNamespace:kDefaultNamespace URL:self.fileURL contents:fileData attributes:nil];
+        !self.completedBlock ?: self.completedBlock(localFileURL, nil);
     }
-    
-    float progress = (float)totalBytesWritten / totalBytesExpectedToWrite;
-    NSLog(@" %@ ,progress = %f",[NSThread currentThread],progress);
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
+didCompleteWithError:(nullable NSError *)error
+{
+    !self.completedBlock ?: self.completedBlock(nil, error);
 }
 @end

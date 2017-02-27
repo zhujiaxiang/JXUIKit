@@ -42,10 +42,12 @@
 		64AE58A41E604A6F0065D9DC /* JXFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AE58A21E604A6F0065D9DC /* JXFileDownloader.m */; };
 		64AE58A71E604A800065D9DC /* JXFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 64AE58A51E604A800065D9DC /* JXFileCache.h */; };
 		64AE58A81E604A800065D9DC /* JXFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AE58A61E604A800065D9DC /* JXFileCache.m */; };
+		64C7C78B1E643EDA00D43BDF /* UIImage+JXExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C7C7891E643EDA00D43BDF /* UIImage+JXExtension.h */; };
+		64C7C78C1E643EDA00D43BDF /* UIImage+JXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7C78A1E643EDA00D43BDF /* UIImage+JXExtension.m */; };
+		64C7C7901E643F4B00D43BDF /* JXFileDownloadView.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C7C78E1E643F4B00D43BDF /* JXFileDownloadView.h */; };
+		64C7C7911E643F4B00D43BDF /* JXFileDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C7C78F1E643F4B00D43BDF /* JXFileDownloadView.m */; };
 		64D01D671E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D5E1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h */; };
 		64D01D681E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D5F1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m */; };
-		64D01D6F1E5EF0EE00C7EDD4 /* JXFileLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D01D6D1E5EF0EE00C7EDD4 /* JXFileLoadingView.h */; };
-		64D01D701E5EF0EE00C7EDD4 /* JXFileLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D01D6E1E5EF0EE00C7EDD4 /* JXFileLoadingView.m */; };
 		E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */; };
 /* End PBXBuildFile section */
 
@@ -92,10 +94,12 @@
 		64AE58A21E604A6F0065D9DC /* JXFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileDownloader.m; path = JXFilePreviewViewCtonroller/JXFileDownloader.m; sourceTree = "<group>"; };
 		64AE58A51E604A800065D9DC /* JXFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXFileCache.h; path = JXFilePreviewViewCtonroller/JXFileCache.h; sourceTree = "<group>"; };
 		64AE58A61E604A800065D9DC /* JXFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXFileCache.m; path = JXFilePreviewViewCtonroller/JXFileCache.m; sourceTree = "<group>"; };
+		64C7C7891E643EDA00D43BDF /* UIImage+JXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JXExtension.h"; sourceTree = "<group>"; };
+		64C7C78A1E643EDA00D43BDF /* UIImage+JXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JXExtension.m"; sourceTree = "<group>"; };
+		64C7C78E1E643F4B00D43BDF /* JXFileDownloadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFileDownloadView.h; sourceTree = "<group>"; };
+		64C7C78F1E643F4B00D43BDF /* JXFileDownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFileDownloadView.m; sourceTree = "<group>"; };
 		64D01D5E1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFilePreviewViewController.h; sourceTree = "<group>"; };
 		64D01D5F1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFilePreviewViewController.m; sourceTree = "<group>"; };
-		64D01D6D1E5EF0EE00C7EDD4 /* JXFileLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFileLoadingView.h; sourceTree = "<group>"; };
-		64D01D6E1E5EF0EE00C7EDD4 /* JXFileLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFileLoadingView.m; sourceTree = "<group>"; };
 		8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -226,6 +230,8 @@
 		649DFA8F1E51C48900B65AEE /* JXUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				64C7C7921E643F9100D43BDF /* JXFileDownloadView */,
+				64C7C78D1E643EE000D43BDF /* JXExtension */,
 				64D01D661E5EF0CD00C7EDD4 /* JXFilePreviewViewController */,
 				6450B4751E5C3A8B0031309F /* JXSearchController */,
 				6450B4511E5C38CB0031309F /* JXMapKit */,
@@ -235,6 +241,25 @@
 				649DFA911E51C48900B65AEE /* Info.plist */,
 			);
 			path = JXUIKit;
+			sourceTree = "<group>";
+		};
+		64C7C78D1E643EE000D43BDF /* JXExtension */ = {
+			isa = PBXGroup;
+			children = (
+				64C7C7891E643EDA00D43BDF /* UIImage+JXExtension.h */,
+				64C7C78A1E643EDA00D43BDF /* UIImage+JXExtension.m */,
+			);
+			name = JXExtension;
+			sourceTree = "<group>";
+		};
+		64C7C7921E643F9100D43BDF /* JXFileDownloadView */ = {
+			isa = PBXGroup;
+			children = (
+				64C7C78E1E643F4B00D43BDF /* JXFileDownloadView.h */,
+				64C7C78F1E643F4B00D43BDF /* JXFileDownloadView.m */,
+			);
+			name = JXFileDownloadView;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		64D01D621E5EF0CD00C7EDD4 /* JXFileDownloader */ = {
@@ -264,19 +289,9 @@
 				64D01D5F1E5EF0CD00C7EDD4 /* JXFilePreviewViewController.m */,
 				64D01D621E5EF0CD00C7EDD4 /* JXFileDownloader */,
 				64D01D651E5EF0CD00C7EDD4 /* JXFileCache */,
-				64D01D711E5EF0F500C7EDD4 /* JXFileLoadingView */,
 			);
 			name = JXFilePreviewViewController;
 			path = JXFilePreviewViewCtonroller;
-			sourceTree = "<group>";
-		};
-		64D01D711E5EF0F500C7EDD4 /* JXFileLoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				64D01D6D1E5EF0EE00C7EDD4 /* JXFileLoadingView.h */,
-				64D01D6E1E5EF0EE00C7EDD4 /* JXFileLoadingView.m */,
-			);
-			name = JXFileLoadingView;
 			sourceTree = "<group>";
 		};
 		88D5D8078169F79E8BF048A9 /* Pods */ = {
@@ -295,17 +310,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D01D6F1E5EF0EE00C7EDD4 /* JXFileLoadingView.h in Headers */,
 				6450B44F1E5C37B40031309F /* JXDropdownMenuItem.h in Headers */,
 				64D01D671E5EF0CD00C7EDD4 /* JXFilePreviewViewController.h in Headers */,
 				6450B45E1E5C38CB0031309F /* JXMapViewController.h in Headers */,
 				6450B45B1E5C38CB0031309F /* JXMapKit.h in Headers */,
+				64C7C7901E643F4B00D43BDF /* JXFileDownloadView.h in Headers */,
 				6450B4781E5C3A8B0031309F /* JXSearchController.h in Headers */,
 				6450B4421E5C36300031309F /* JXPopupMenuItemCell.h in Headers */,
 				6450B44D1E5C37B40031309F /* JXDropdownMenu.h in Headers */,
 				64AE58A71E604A800065D9DC /* JXFileCache.h in Headers */,
 				6450B4401E5C36300031309F /* JXPopupMenuItem.h in Headers */,
 				64AE58A31E604A6F0065D9DC /* JXFileDownloader.h in Headers */,
+				64C7C78B1E643EDA00D43BDF /* UIImage+JXExtension.h in Headers */,
 				6450B4441E5C36300031309F /* JXPopupMenuPageCell.h in Headers */,
 				6450B45C1E5C38CB0031309F /* JXMapView.h in Headers */,
 				6450B4461E5C36300031309F /* JXPopupView.h in Headers */,
@@ -466,12 +482,13 @@
 				6450B44E1E5C37B40031309F /* JXDropdownMenu.m in Sources */,
 				6450B43F1E5C36300031309F /* JXPopupMenu.m in Sources */,
 				6450B4501E5C37B40031309F /* JXDropdownMenuItem.m in Sources */,
+				64C7C7911E643F4B00D43BDF /* JXFileDownloadView.m in Sources */,
 				6450B4431E5C36300031309F /* JXPopupMenuItemCell.m in Sources */,
 				6450B4791E5C3A8B0031309F /* JXSearchController.m in Sources */,
 				6450B45F1E5C38CB0031309F /* JXMapViewController.m in Sources */,
+				64C7C78C1E643EDA00D43BDF /* UIImage+JXExtension.m in Sources */,
 				6450B4471E5C36300031309F /* JXPopupView.m in Sources */,
 				64AE58A81E604A800065D9DC /* JXFileCache.m in Sources */,
-				64D01D701E5EF0EE00C7EDD4 /* JXFileLoadingView.m in Sources */,
 				6450B45A1E5C38CB0031309F /* JXImageCropperView.m in Sources */,
 				6450B4411E5C36300031309F /* JXPopupMenuItem.m in Sources */,
 				6450B45D1E5C38CB0031309F /* JXMapView.m in Sources */,
