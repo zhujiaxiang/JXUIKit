@@ -10,14 +10,6 @@
 #import "UIImage+jxExtension.h"
 #import <Masonry/Masonry.h>
 
-@interface JXFileDownloadView ()
-
-@property(nonatomic, strong) UIImageView *extensionView;
-@property(nonatomic, strong) UILabel *fileTitleLabel;
-@property(nonatomic, strong) UIButton *downloadButton;
-@property(nonatomic, strong) UILabel *progressLabel;
-
-@end
 
 @implementation JXFileDownloadView
 

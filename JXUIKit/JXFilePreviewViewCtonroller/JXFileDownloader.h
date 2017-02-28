@@ -17,10 +17,10 @@ typedef void (^JXCheckCacheCompletionBlock)(NSURL *__nullable localFileURL);
 
 @optional
 
-- (void)JX_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader totalBytesWritten:(int64_t)totalBytesWritten
+- (void)jx_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite WebURL:(nonnull NSURL *)url;
 
-- (void)JX_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader didFinishedDownloadingFromWebURL:(nonnull NSURL *)url ToURL:(NSURL *)location;
+- (void)jx_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader didFinishedDownloadingFromWebURL:(nonnull NSURL *)url ToURL:(NSURL *)location;
 
 @end
 
@@ -28,7 +28,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite WebURL:(nonnull NSU
 
 + (nullable instancetype)sharedDownloader;
 
-@property(nonatomic, weak,nullable) id< JXFileDownloaderDelegate> delegate;
+@property(nonatomic, weak,nullable) id<JXFileDownloaderDelegate> delegate;
 
 - (void)downloadFileWithURL:(nonnull NSURL *)fileURL completed:(nonnull JXFileDownloadCompletionBlock)completedBlock;
 

@@ -77,8 +77,8 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 {
     
     NSLog(@"%lf", 1.0 * totalBytesWritten / totalBytesExpectedToWrite);
-    if ([self.delegate respondsToSelector:@selector(JX_fileDownloader:totalBytesWritten:totalBytesExpectedToWrite:WebURL:)]) {
-        [self.delegate JX_fileDownloader:self totalBytesWritten:totalBytesWritten totalBytesExpectedToWrite:totalBytesExpectedToWrite WebURL:self.fileURL];
+    if ([self.delegate respondsToSelector:@selector(jx_fileDownloader:totalBytesWritten:totalBytesExpectedToWrite:WebURL:)]) {
+        [self.delegate jx_fileDownloader:self totalBytesWritten:totalBytesWritten totalBytesExpectedToWrite:totalBytesExpectedToWrite WebURL:self.fileURL];
     }
 }
 
@@ -93,8 +93,8 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
         localFileURL = [[JXFileCache sharedCache] storeLocalFileURLByFullNamespace:kDefaultNamespace URL:self.fileURL contents:fileData attributes:nil];
         !self.completedBlock ?: self.completedBlock(localFileURL, nil);
         self.isDownloading = NO;
-        if ([self.delegate respondsToSelector:@selector(JX_fileDownloader:didFinishedDownloadingFromWebURL:ToURL:)]) {
-            [self.delegate JX_fileDownloader:self didFinishedDownloadingFromWebURL:self.fileURL ToURL:localFileURL];
+        if ([self.delegate respondsToSelector:@selector(jx_fileDownloader:didFinishedDownloadingFromWebURL:ToURL:)]) {
+            [self.delegate jx_fileDownloader:self didFinishedDownloadingFromWebURL:self.fileURL ToURL:localFileURL];
         }
     }
 }

@@ -23,6 +23,10 @@
 
 @property(nonatomic, weak) id<JXFileDownloadViewDelegate> delegate;
 @property(nonatomic, strong) NSString *extension;
+@property(nonatomic, strong) UIImageView *extensionView;
+@property(nonatomic, strong) UILabel *fileTitleLabel;
+@property(nonatomic, strong) UIButton *downloadButton;
+@property(nonatomic, strong) UILabel *progressLabel;
 
 @end
 
