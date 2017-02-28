@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641C53AC1E65826200553777 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641C53AB1E65826200553777 /* iflyMSC.framework */; };
 		6450B4321E5C34ED0031309F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6450B4311E5C34ED0031309F /* Podfile */; };
 		6450B43E1E5C36300031309F /* JXPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6450B4341E5C36300031309F /* JXPopupMenu.h */; };
 		6450B43F1E5C36300031309F /* JXPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450B4351E5C36300031309F /* JXPopupMenu.m */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		4B3EACAF9A06815C48DD8EB6 /* Pods-JXUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXUIKit/Pods-JXUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		641C53AB1E65826200553777 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		6450B4311E5C34ED0031309F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6450B4341E5C36300031309F /* JXPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPopupMenu.h; sourceTree = "<group>"; };
 		6450B4351E5C36300031309F /* JXPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPopupMenu.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641C53AC1E65826200553777 /* iflyMSC.framework in Frameworks */,
 				E00CC552AE6C47EBA31BD955 /* libPods-JXUIKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +129,7 @@
 		588846CDC9303C4BF94FA99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				641C53AB1E65826200553777 /* iflyMSC.framework */,
 				AF8EE8CE64EC63341B705C01 /* libPods-JXUIKit.a */,
 			);
 			name = Frameworks;
@@ -387,6 +391,7 @@
 					};
 					649DFA8C1E51C48900B65AEE = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3UBA29BW8P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -645,10 +650,17 @@
 			baseConfigurationReference = 8A109E9491380AA53F62EDB0 /* Pods-JXUIKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3UBA29BW8P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JXUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -664,9 +676,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3UBA29BW8P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JXUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

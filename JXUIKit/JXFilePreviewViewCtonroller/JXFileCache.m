@@ -9,7 +9,7 @@
 #import "JXFileCache.h"
 #import <CommonCrypto/CommonDigest.h>
 
-static NSString *const sFileCacheDirName = @"FileCache";
+static NSString *const kDefaultNamespace = @"com.zjx.JXFileCache";
 
 @implementation JXFileCache
 
@@ -44,7 +44,7 @@ static NSString *const sFileCacheDirName = @"FileCache";
     return filename;
 }
 
-- (nullable NSURL *)getLocalFileURLByFullNamespace:(nullable NSString *)fullNamespace URL:(nonnull NSURL *)url contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr
+- (nullable NSURL *)storeLocalFileURLByFullNamespace:(nullable NSString *)fullNamespace URL:(nonnull NSURL *)url contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr
 {
     NSURL *localFileURL = nil;
     //构建缓存目录
@@ -73,4 +73,11 @@ static NSString *const sFileCacheDirName = @"FileCache";
     return localFileURL;
 }
 
+- (NSString *)defaultFileCachePathForWebURL:(nonnull NSURL *)url
+{
+    NSString *dirPath = [self makeDiskCachePath:kDefaultNamespace];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@", dirPath, [self cachedFileNameForKey:url.absoluteString]];
+    
+    return filePath;
+}
 @end

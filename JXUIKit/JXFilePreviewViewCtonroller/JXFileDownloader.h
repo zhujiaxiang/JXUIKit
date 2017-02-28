@@ -8,17 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^JXFileDownloadProgressCompletionBlock)(NSInteger receivedSize, NSInteger expectedSize);
 typedef void (^JXFileDownloadCompletionBlock)(NSURL *__nullable localFileURL, NSError *__nullable error);
-typedef void (^KLCheckCacheCompletionBlock)(NSURL *__nullable localFileURL);
+typedef void (^JXCheckCacheCompletionBlock)(NSURL *__nullable localFileURL);
 
+@class JXFileDownloader;
+
+@protocol JXFileDownloaderDelegate <NSObject>
+
+@optional
+
+- (void)JX_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader totalBytesWritten:(int64_t)totalBytesWritten
+totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite WebURL:(nonnull NSURL *)url;
+
+- (void)JX_fileDownloader:(nullable JXFileDownloader *)JXFileDownloader didFinishedDownloadingFromWebURL:(nonnull NSURL *)url ToURL:(NSURL *)location;
+
+@end
 
 @interface JXFileDownloader : NSObject
 
 + (nullable instancetype)sharedDownloader;
 
-- (void)downloadFileWithURL:(nonnull NSURL *)fileURL progress:(nullable JXFileDownloadProgressCompletionBlock)progressBlock completed:(nonnull JXFileDownloadCompletionBlock)completedBlock;
+@property(nonatomic, weak,nullable) id< JXFileDownloaderDelegate> delegate;
 
-- (void)cacheFileWithLocation:(nonnull NSURL *)location;
+- (void)downloadFileWithURL:(nonnull NSURL *)fileURL completed:(nonnull JXFileDownloadCompletionBlock)completedBlock;
+
+- (void)diskFileExistsWithWebURL:(nonnull NSURL *)webURL completed:(nullable JXCheckCacheCompletionBlock)completedBlock;
 
 @end

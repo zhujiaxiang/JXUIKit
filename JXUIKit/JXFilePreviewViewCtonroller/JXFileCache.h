@@ -16,6 +16,8 @@
 
 - (nullable NSString *)cachedFileNameForKey:(nullable NSString *)key;
 
-- (nullable NSURL *)getLocalFileURLByFullNamespace:(nullable NSString *)fullNamespace URL:(nonnull NSURL *)url contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr;
+- (nullable NSURL *)storeLocalFileURLByFullNamespace:(nullable NSString *)fullNamespace URL:(nonnull NSURL *)url contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr;
+
+- (nullable NSString *)defaultFileCachePathForWebURL:(nonnull NSURL *)url;
 
 @end
