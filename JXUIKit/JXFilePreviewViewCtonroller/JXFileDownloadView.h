@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JXProgressView.h>
+
 
 @class JXFileDownloadView;
 
@@ -27,6 +29,7 @@
 @property(nonatomic, strong) UILabel *fileTitleLabel;
 @property(nonatomic, strong) UIButton *downloadButton;
 @property(nonatomic, strong) UILabel *progressLabel;
+@property(nonatomic, strong) JXProgressView *progressView;
 
 @end
 

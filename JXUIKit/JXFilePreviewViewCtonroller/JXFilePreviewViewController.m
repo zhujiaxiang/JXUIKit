@@ -147,6 +147,8 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.downloadView.progressLabel.text = [NSString stringWithFormat:@"%.2f %%  %.2f mb/%.2f mb", progress * 100, (float)totalBytesWritten / 1000000, (float)totalBytesExpectedToWrite / 1000000];
+            self.downloadView.progressView.progressValue = progress;
+
         });
         
     } else {

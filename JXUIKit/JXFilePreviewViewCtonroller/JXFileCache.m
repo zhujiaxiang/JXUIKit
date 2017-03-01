@@ -80,4 +80,25 @@ static NSString *const kDefaultNamespace = @"com.zjx.JXFileCache";
     
     return filePath;
 }
+
+- (void)clearAllCaches
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    NSString *dirPathStr = nil;
+    
+    if (kDefaultNamespace) {
+        dirPathStr = [self makeDiskCachePath:kDefaultNamespace];
+    } else {
+        dirPathStr = [self makeDiskCachePath:[NSBundle mainBundle].bundleIdentifier];
+    }
+    
+    NSURL *dirPath = [NSURL URLWithString:dirPathStr];
+    
+    if ([fm fileExistsAtPath:dirPathStr]) {
+        BOOL success = [fm removeItemAtPath:dirPathStr error:nil];
+        
+        NSLog(@"%i",success);
+    }
+}
 @end

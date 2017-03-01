@@ -20,4 +20,6 @@
 
 - (nullable NSString *)defaultFileCachePathForWebURL:(nonnull NSURL *)url;
 
+- (void)clearAllCaches;
+
 @end

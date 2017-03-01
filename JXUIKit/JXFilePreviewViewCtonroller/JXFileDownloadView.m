@@ -7,7 +7,6 @@
 //
 
 #import "JXFileDownloadView.h"
-#import "UIImage+jxExtension.h"
 #import <Masonry/Masonry.h>
 
 
@@ -59,7 +58,7 @@
             
             view.titleLabel.font = [UIFont fontWithName:@"Heiti SC" size:17];
             view.titleLabel.textColor = [UIColor whiteColor];
-            [view setBackgroundImage:[UIImage jx_imageWithColor:[UIColor greenColor]] forState:UIControlStateNormal];
+//            [view setBackgroundImage:[UIImage jx_imageWithColor:[UIColor greenColor]] forState:UIControlStateNormal];
             view.layer.cornerRadius = 3.0f;
             view.layer.masksToBounds = YES;
             [view setTitle:@"download" forState:UIControlStateNormal];
@@ -92,6 +91,23 @@
             
             view;
         });
+        
+        self.progressView = ({
+            
+            JXProgressView *view = [[JXProgressView alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
+            
+            [self addSubview:view];
+            
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.mas_equalTo(self.mas_centerX);
+                make.top.mas_equalTo(self.progressLabel.mas_bottom).offset(15.0f);
+                make.height.mas_equalTo(5.0f);
+                make.width.mas_equalTo(300);
+            }];
+            
+            view;
+        });
+
     }
     return self;
 }
