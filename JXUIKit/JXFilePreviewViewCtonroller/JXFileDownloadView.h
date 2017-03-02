@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JXProgressView.h>
+#import "JXProgressView.h"
 
 
 @class JXFileDownloadView;
